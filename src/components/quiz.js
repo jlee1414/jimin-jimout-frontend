@@ -1,6 +1,3 @@
-
-
-
 // const questions = [
 // 		{
 // 			questionText: "Your friend calls you and wants to chat. You:",
