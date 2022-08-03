@@ -4,7 +4,7 @@ export default function App() {
 	const questions = [
 		{
 			questionText: "Your friend calls you and wants to chat. You:",
-			answerOptions: [ //change the isCorrect to weight percentage later?
+			answerOptions: [ //change the isCorrect to weight percentage later? 
 				{ answerText: "A: Ignore the call.", isCorrect: false }, //sad
 				{ answerText: "B: Answer and talk for over an hour!", isCorrect: false }, //happy
 				{ answerText: "C: Answer and don't say much. Conversation only lasts 5-minutes.", isCorrect: true }, //tired
