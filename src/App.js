@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React from "react";
 import Quiz from "./components/Quiz";
 import Result from "./components/Results"
 import axios from "axios";
-
+import { useEffect, useState } from "react";
+import "./App.css"
 
 
 export default function App() {
   // const [currentQuestion, setCurrentQuestion] = useState(0);
+
   // const [showScore, setShowScore] = useState(false);
+  
   // const [score, setScore] = useState(0);
 
   // const handleAnswerOptionClick = (isCorrect) => {
@@ -25,4 +28,10 @@ export default function App() {
   //     setShowScore(true);
   //   }
   // };
+
+  return (
+    <div>
+
+    </div>
+  );
   }

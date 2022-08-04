@@ -2,9 +2,6 @@ import "./Quiz.css";
 import Proptypes from "prop-types";
 import { useState } from "react";
 
-
-
-
 const Quiz = (props) => {
   const questions = [
 		{
@@ -12,7 +9,7 @@ const Quiz = (props) => {
 			answerOptions: [ //change the isCorrect to weight percentage later? 
 				{ answerText: "A: Ignore the call.", isCorrect: false }, //sad
 				{ answerText: "B: Answer and talk for over an hour!", isCorrect: false }, //happy
-				{ answerText: "C: Answer and don't say much. Conversation only lasts 5-minutes.", isCorrect: true }, //tired
+				{ answerText: "C: Answer and don't say much. Conversation only lasts 5 minutes.", isCorrect: true }, //tired
 				{ answerText: "D: Answer and begin ranting about everything you hate.", isCorrect: false }, //angry
 			],
 		},
@@ -96,7 +93,9 @@ const Quiz = (props) => {
 
 // does this go in App.js?
   const [currentQuestion, setCurrentQuestion] = useState(0);
+
   const [showScore, setShowScore] = useState(false);
+  
   const [score, setScore] = useState(0);
 
   const handleAnswerOptionClick = (isCorrect) => {
@@ -105,7 +104,7 @@ const Quiz = (props) => {
     }
 
     // while loop that uses JSON as a frequency table to keep track of which answer the user is feeling
-    // and return that feeling to retrieve the corresponding playlist
+    // and return that feeling to retrieve the corresponding playlist. If tie, wtf do we do
 
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) {
