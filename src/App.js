@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import Quiz from "./components/Quiz";
-import Result from "./components/Results"
+import Result from "./components/Results";
 import axios from "axios";
-
-
 
 export default function App() {
   // const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -25,4 +23,14 @@ export default function App() {
   //     setShowScore(true);
   //   }
   // };
-  }
+  return (
+    <div className="App-Main">
+      <header className="App-Main-header">
+        <h1>Once you Jimin, you can't Jimout</h1>
+      </header>
+      <main>
+        <div>{<Quiz />}</div>
+      </main>
+    </div>
+  );
+}
