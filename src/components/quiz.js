@@ -15,6 +15,64 @@ const Quiz = (props) => {
         }, //happy
         {
           answerText:
+            "C: Answer and don't say much. Conversation only lasts 5 minutes.",
+          isCorrect: true,
+        }, //tired
+        {
+          answerText: "D: Answer and begin ranting about everything you hate.",
+          isCorrect: false,
+        }, //angry
+      ],
+    },
+    {
+      questionText:
+        "The sun is shining, and the temperature is just right. What are you going to do today?",
+      answerOptions: [
+        {
+          answerText: "A: Get outside and do something great!",
+          isCorrect: false,
+        }, //happy
+        {
+          answerText: "B: Watch TV, play on my phone, nothing too exciting.",
+          isCorrect: true,
+        }, //sad
+        { answerText: "C: The same thing I do every day.", isCorrect: false }, //tired
+        {
+          answerText:
+            "D: Who knows - I'm sure someone will come along and ruin my day.",
+          isCorrect: false,
+        }, //angry
+      ],
+    },
+    {
+      questionText: "Choose a color:",
+      answerOptions: [
+        { answerText: "A: Beige", isCorrect: true }, //tired
+        { answerText: "B: Red", isCorrect: false }, //angry
+        { answerText: "C: Black", isCorrect: false }, //sad
+        { answerText: "D: Blue", isCorrect: false }, //happy
+      ],
+    },
+    {
+      questionText: "Do you worry a lot?",
+      answerOptions: [
+        { answerText: "A: All the time.", isCorrect: false }, //sad
+        { answerText: "B: No, who has the time?", isCorrect: false }, //tired
+        { answerText: "C: Only about the big stuff.", isCorrect: false }, //happy
+        { answerText: "D: Only about myself!", isCorrect: true }, //angry
+      ],
+    },
+    {
+      questionText: "Your friend calls you and wants to chat. You:",
+      answerOptions: [
+        //change the isCorrect to weight percentage later?
+        { answerText: "A: Ignore the call.", isCorrect: false }, //sad
+        {
+          answerText: "B: Answer and talk for over an hour!",
+          isCorrect: false,
+        }, //happy
+        {
+          answerText:
             "C: Answer and don't say much. Conversation only lasts 5-minutes.",
           isCorrect: true,
         }, //tired
@@ -135,7 +193,9 @@ const Quiz = (props) => {
 
   // does this go in App.js?
   const [currentQuestion, setCurrentQuestion] = useState(0);
+
   const [showScore, setShowScore] = useState(false);
+
   const [score, setScore] = useState(0);
 
   const handleAnswerOptionClick = (isCorrect) => {
@@ -144,7 +204,7 @@ const Quiz = (props) => {
     }
 
     // while loop that uses JSON as a frequency table to keep track of which answer the user is feeling
-    // and return that feeling to retrieve the corresponding playlist
+    // and return that feeling to retrieve the corresponding playlist. If tie, wtf do we do
 
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) {

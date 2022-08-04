@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import Quiz from "./components/Quiz";
 import Result from "./components/Results";
 import axios from "axios";
+import "./App.css";
 
 export default function App() {
   // const [currentQuestion, setCurrentQuestion] = useState(0);
+
   // const [showScore, setShowScore] = useState(false);
+
   // const [score, setScore] = useState(0);
 
   // const handleAnswerOptionClick = (isCorrect) => {
