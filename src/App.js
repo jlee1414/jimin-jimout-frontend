@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Quiz from "./components/Quiz";
+import Home from "./components/Home";
 import Result from "./components/Results";
 import axios from "axios";
 import "./App.css";
 
+import Navbar from "./components/Navbar";
+
 export default function App() {
+  //Source of truth in App
+  //Axios call to backend
+  //Create hash map for quiz results
+  //Compare hashmap w/ spotify data
+
   // const [currentQuestion, setCurrentQuestion] = useState(0);
 
   // const [showScore, setShowScore] = useState(false);
@@ -26,14 +34,23 @@ export default function App() {
   //     setShowScore(true);
   //   }
   // };
+
   return (
     <div className="App-Main">
       <header className="App-Main-header">
         <h1>Once you Jimin, you can't Jimout</h1>
       </header>
-      <main>
-        <div>{<Quiz />}</div>
-      </main>
+      <div>
+        <ul id="nav-bar">
+          <li>
+            <a href="http://localhost:3000/">Home</a>
+          </li>
+          <li>
+            <a href="http://localhost:3000/quiz">Quiz</a>
+          </li>
+        </ul>
+        <Navbar />
+      </div>
     </div>
   );
 }

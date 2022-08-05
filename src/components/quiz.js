@@ -8,19 +8,22 @@ const Quiz = (props) => {
       questionText: "Your friend calls you and wants to chat. You:",
       answerOptions: [
         //change the isCorrect to weight percentage later?
-        { answerText: "A: Ignore the call.", isCorrect: false }, //sad
+        { answerText: "A: Ignore the call.", isCorrect: false, mood: "sad" }, //sad
         {
           answerText: "B: Answer and talk for over an hour!",
           isCorrect: false,
+          mood: "happy",
         }, //happy
         {
           answerText:
             "C: Answer and don't say much. Conversation only lasts 5 minutes.",
           isCorrect: true,
+          mood: "tired",
         }, //tired
         {
           answerText: "D: Answer and begin ranting about everything you hate.",
           isCorrect: false,
+          mood: "angry",
         }, //angry
       ],
     },
@@ -31,54 +34,72 @@ const Quiz = (props) => {
         {
           answerText: "A: Get outside and do something great!",
           isCorrect: false,
+          mood: "happy",
         }, //happy
         {
           answerText: "B: Watch TV, play on my phone, nothing too exciting.",
           isCorrect: true,
+          mood: "sad",
         }, //sad
-        { answerText: "C: The same thing I do every day.", isCorrect: false }, //tired
+        {
+          answerText: "C: The same thing I do every day.",
+          isCorrect: false,
+          mood: "tired",
+        }, //tired
         {
           answerText:
             "D: Who knows - I'm sure someone will come along and ruin my day.",
           isCorrect: false,
+          mood: "angry",
         }, //angry
       ],
     },
     {
       questionText: "Choose a color:",
       answerOptions: [
-        { answerText: "A: Beige", isCorrect: true }, //tired
-        { answerText: "B: Red", isCorrect: false }, //angry
-        { answerText: "C: Black", isCorrect: false }, //sad
-        { answerText: "D: Blue", isCorrect: false }, //happy
+        { answerText: "A: Beige", isCorrect: true, mood: "tired" }, //tired
+        { answerText: "B: Red", isCorrect: false, mood: "angry" }, //angry
+        { answerText: "C: Black", isCorrect: false, mood: "sad" }, //sad
+        { answerText: "D: Blue", isCorrect: false, mood: "happy" }, //happy
       ],
     },
     {
       questionText: "Do you worry a lot?",
       answerOptions: [
-        { answerText: "A: All the time.", isCorrect: false }, //sad
-        { answerText: "B: No, who has the time?", isCorrect: false }, //tired
-        { answerText: "C: Only about the big stuff.", isCorrect: false }, //happy
-        { answerText: "D: Only about myself!", isCorrect: true }, //angry
+        { answerText: "A: All the time.", isCorrect: false, mood: "sad" }, //sad
+        {
+          answerText: "B: No, who has the time?",
+          isCorrect: false,
+          mood: "tired",
+        }, //tired
+        {
+          answerText: "C: Only about the big stuff.",
+          isCorrect: false,
+          mood: "happy",
+        }, //happy
+        { answerText: "D: Only about myself!", isCorrect: true, mood: "angry" }, //angry
       ],
     },
     {
       questionText: "Your friend calls you and wants to chat. You:",
       answerOptions: [
         //change the isCorrect to weight percentage later?
-        { answerText: "A: Ignore the call.", isCorrect: false }, //sad
+        { answerText: "A: Ignore the call.", isCorrect: false, mood: "sad" }, //sad
         {
           answerText: "B: Answer and talk for over an hour!",
           isCorrect: false,
+          mood: "happy",
         }, //happy
         {
           answerText:
             "C: Answer and don't say much. Conversation only lasts 5-minutes.",
           isCorrect: true,
+          mood: "tired",
         }, //tired
         {
           answerText: "D: Answer and begin ranting about everything you hate.",
           isCorrect: false,
+          mood: "angry",
         }, //angry
       ],
     },
@@ -89,44 +110,59 @@ const Quiz = (props) => {
         {
           answerText: "A: Get outside and do something great!",
           isCorrect: false,
+          mood: "happy",
         }, //happy
         {
           answerText: "B: Watch TV, play on my phone, nothing too exciting.",
           isCorrect: true,
+          mood: "sad",
         }, //sad
-        { answerText: "C: The same thing I do every day.", isCorrect: false }, //tired
+        {
+          answerText: "C: The same thing I do every day.",
+          isCorrect: false,
+          mood: "tired",
+        }, //tired
         {
           answerText:
             "D: Who knows - I'm sure someone will come along and ruin my day.",
           isCorrect: false,
+          mood: "angry",
         }, //angry
       ],
     },
     {
       questionText: "Choose a color:",
       answerOptions: [
-        { answerText: "A: Beige", isCorrect: true }, //tired
-        { answerText: "B: Red", isCorrect: false }, //angry
-        { answerText: "C: Black", isCorrect: false }, //sad
-        { answerText: "D: Blue", isCorrect: false }, //happy
+        { answerText: "A: Beige", isCorrect: true, mood: "tired" }, //tired
+        { answerText: "B: Red", isCorrect: false, mood: "angry" }, //angry
+        { answerText: "C: Black", isCorrect: false, mood: "sad" }, //sad
+        { answerText: "D: Blue", isCorrect: false, mood: "happy" }, //happy
       ],
     },
     {
       questionText: "Do you worry a lot?",
       answerOptions: [
-        { answerText: "A: All the time.", isCorrect: false }, //sad
-        { answerText: "B: No, who has the time?", isCorrect: false }, //tired
-        { answerText: "C: Only about the big stuff.", isCorrect: false }, //happy
-        { answerText: "D: Only about myself!", isCorrect: true }, //angry
+        { answerText: "A: All the time.", isCorrect: false, mood: "sad" }, //sad
+        {
+          answerText: "B: No, who has the time?",
+          isCorrect: false,
+          mood: "tired",
+        }, //tired
+        {
+          answerText: "C: Only about the big stuff.",
+          isCorrect: false,
+          mood: "happy",
+        }, //happy
+        { answerText: "D: Only about myself!", isCorrect: true, mood: "angry" }, //angry
       ],
     },
     {
       questionText: "It's Monday morning, and you have to go to work. You:",
       answerOptions: [
-        { answerText: "A; Quit!", isCorrect: false }, //angry
-        { answerText: "B: Go in late", isCorrect: false }, //tired
-        { answerText: "C: Call in sick", isCorrect: false }, //sad
-        { answerText: "D; Go in!", isCorrect: true }, //happy
+        { answerText: "A; Quit!", isCorrect: false, mood: "angry" }, //angry
+        { answerText: "B: Go in late", isCorrect: false, mood: "tired" }, //tired
+        { answerText: "C: Call in sick", isCorrect: false, mood: "sad" }, //sad
+        { answerText: "D; Go in!", isCorrect: true, mood: "happy" }, //happy
       ],
     },
     {
@@ -135,58 +171,98 @@ const Quiz = (props) => {
         {
           answerText: "A: Doesn't matter! Any day is beautiful!",
           isCorrect: false,
+          mood: "happy",
         }, //happy
-        { answerText: "B: Cloudy and rainy", isCorrect: false }, //sad
+        { answerText: "B: Cloudy and rainy", isCorrect: false, mood: "sad" }, //sad
         {
           answerText: "C: Blizzard/storm to shut down the whole neighborhood.",
           isCorrect: false,
+          mood: "angry",
         }, //angry
-        { answerText: "D: Snowy and cold.", isCorrect: true }, //tired
+        { answerText: "D: Snowy and cold.", isCorrect: true, mood: "tired" }, //tired
       ],
     },
     {
       questionText:
         "When was the last time you took a vacation/time for yourself?",
       answerOptions: [
-        { answerText: "A: I don't remember...", isCorrect: false }, //tired
-        { answerText: "B: Who has time for a vacation?", isCorrect: false }, //angry
-        { answerText: "C: Whenever I feel the need!", isCorrect: false }, //happy
-        { answerText: "D: Time for myself?", isCorrect: true }, //sad
+        {
+          answerText: "A: I don't remember...",
+          isCorrect: false,
+          mood: "tired",
+        }, //tired
+        {
+          answerText: "B: Who has time for a vacation?",
+          isCorrect: false,
+          mood: "angry",
+        }, //angry
+        {
+          answerText: "C: Whenever I feel the need!",
+          isCorrect: false,
+          mood: "happy",
+        }, //happy
+        { answerText: "D: Time for myself?", isCorrect: true, mood: "sad" }, //sad
       ],
     },
     {
       questionText:
         "If you could do anything you wanted, right now, you would:",
       answerOptions: [
-        { answerText: "A: Scream and yell.", isCorrect: false }, //angry
-        { answerText: "B: Sleep", isCorrect: false }, //tired
+        { answerText: "A: Scream and yell.", isCorrect: false, mood: "angry" }, //angry
+        { answerText: "B: Sleep", isCorrect: false, mood: "tired" }, //tired
         {
           answerText: "C: Spend quality time with my loved ones.",
           isCorrect: false,
+          mood: "happy",
         }, //happy
-        { answerText: "D: Go on a walk alone.", isCorrect: true }, //sad
+        { answerText: "D: Go on a walk alone.", isCorrect: true, mood: "sad" }, //sad
       ],
     },
     {
       questionText: "How are you feeling today?",
       answerOptions: [
-        { answerText: "A: No complaints.", isCorrect: false }, //happy
-        { answerText: "B: I want to punch a wall.", isCorrect: false }, //angry
-        { answerText: "C: Like there is no point.", isCorrect: false }, //sad
-        { answerText: "D: Ready for the day to end.", isCorrect: true }, //tired
+        { answerText: "A: No complaints.", isCorrect: false, mood: "happy" }, //happy
+        {
+          answerText: "B: I want to punch a wall.",
+          isCorrect: false,
+          mood: "angry",
+        }, //angry
+        {
+          answerText: "C: Like there is no point.",
+          isCorrect: false,
+          mood: "sad",
+        }, //sad
+        {
+          answerText: "D: Ready for the day to end.",
+          isCorrect: true,
+          mood: "tired",
+        }, //tired
       ],
     },
     {
       questionText:
         "If your most favorite food was sitting on the counter downstairs, would you go and get it?",
       answerOptions: [
-        { answerText: "A: I don't have a favorite food.", isCorrect: false }, //angry
+        {
+          answerText: "A: I don't have a favorite food.",
+          isCorrect: false,
+          mood: "angry",
+        }, //angry
         {
           answerText: "B: I would... but its just too far away...",
           isCorrect: false,
+          mood: "tired",
         }, //tired
-        { answerText: "C: So what? I couldn't care less.", isCorrect: false }, //sad
-        { answerText: "D: I'm already on my way!", isCorrect: true }, //happy
+        {
+          answerText: "C: So what? I couldn't care less.",
+          isCorrect: false,
+          mood: "sad",
+        }, //sad
+        {
+          answerText: "D: I'm already on my way!",
+          isCorrect: true,
+          mood: "happy",
+        }, //happy
       ],
     },
   ];
