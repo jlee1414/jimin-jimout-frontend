@@ -6,7 +6,7 @@ import "./Results.css";
 const Result = (props) => {
   const fetchTheQuiz = () => {};
 
-  return <div></div>;
+  return <h1>Results here</h1>;
 };
 
 export default Result;

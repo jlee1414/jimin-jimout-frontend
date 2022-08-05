@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Quiz from "./components/Quiz";
-import Home from "./components/Home";
-import Result from "./components/Results";
 import axios from "axios";
 import "./App.css";
 
@@ -12,6 +9,23 @@ export default function App() {
   //Axios call to backend
   //Create hash map for quiz results
   //Compare hashmap w/ spotify data
+
+  const [spotifyData, setSpotifyData] = useState([]);
+
+  useEffect(() => {
+    getSpotifyApi();
+  }, []);
+
+  const getSpotifyApi = () => {
+    axios
+      .get("https://jimin-jimout-backend.herokuapp.com/api")
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log("couldn't call api");
+      });
+  };
 
   // const [currentQuestion, setCurrentQuestion] = useState(0);
 
@@ -47,6 +61,9 @@ export default function App() {
           </li>
           <li>
             <a href="http://localhost:3000/quiz">Quiz</a>
+          </li>
+          <li>
+            <a href="http://localhost:3000/results">Result</a>
           </li>
         </ul>
         <Navbar />
