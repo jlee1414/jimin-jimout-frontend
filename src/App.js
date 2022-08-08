@@ -20,7 +20,17 @@ export default function App() {
     axios
       .get("https://jimin-jimout-backend.herokuapp.com/api")
       .then((response) => {
-        console.log(response);
+        // console.log(response.data);
+        const pulledData = response.data.map((entry) => {
+          return {
+            artist: entry.artist,
+            valence: entry.valence,
+            id: entry.id,
+            track: entry.trackName,
+          };
+        });
+        setSpotifyData(pulledData);
+        console.log(pulledData);
       })
       .catch((error) => {
         console.log("couldn't call api");
