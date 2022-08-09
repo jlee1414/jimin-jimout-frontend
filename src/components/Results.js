@@ -4,9 +4,12 @@ import Proptypes from "prop-types";
 import "./Results.css";
 
 const Result = (props) => {
-  const fetchTheQuiz = () => {};
-
-  return <h1>Results here</h1>;
+  return (
+    <div>
+      <h1>Results here</h1>
+      {props.id}
+    </div>
+  );
 };
 
 export default Result;
