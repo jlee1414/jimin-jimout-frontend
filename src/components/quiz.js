@@ -39,7 +39,7 @@ const Quiz = (props) => {
         {
           answerText: "B: Watch TV, play on my phone, nothing too exciting.",
           isCorrect: false,
-          mood: "sad"
+          mood: "sad",
         }, //sad
         {
           answerText: "C: The same thing I do every day.",
@@ -77,7 +77,11 @@ const Quiz = (props) => {
           isCorrect: false,
           mood: "happy",
         }, //happy
-        { answerText: "D: Only about myself!", isCorrect: false, mood: "angry" }, //angry
+        {
+          answerText: "D: Only about myself!",
+          isCorrect: false,
+          mood: "angry",
+        }, //angry
       ],
     },
     {
@@ -191,33 +195,31 @@ const Quiz = (props) => {
     },
   ];
 
-  
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
   const [showScore, setShowScore] = useState(false);
 
-  const [quizResults, setQuizResults] = useState(
-    {
-    "sad": 0,
-    "angry": 0,
-    "happy": 0,
-    "tired": 0,
-    });
+  const initalQuizResults = {
+    sad: 0,
+    angry: 0,
+    happy: 0,
+    tired: 0,
+  };
 
-  const [score, setScore] = useState(0);
+  const [quizResults, setQuizResults] = useState(initalQuizResults);
 
   const handleAnswerOptionClick = (mood) => {
-    console.log(mood)
-    // if (mood) {
-    //   setScore(score + 1);
-    // }
-    const updatedQuizResults = {...quizResults}
-    // if (mood in updatedQuizResults) {
-    //   updatedQuizResults.mood += 1
-    // }
-    updatedQuizResults.mood = updatedQuizResults.mood + 1
-    setQuizResults(updatedQuizResults)
-    console.log(updatedQuizResults)
+    console.log(typeof mood);
+
+    const updatedQuizResults = { ...quizResults };
+    for (const quizMood in updatedQuizResults) {
+      if (quizMood === mood) {
+        updatedQuizResults[mood]++;
+      }
+    }
+
+    setQuizResults(updatedQuizResults);
+    console.log(updatedQuizResults);
 
     // while loop that uses JSON as a frequency table to keep track of which answer the user is feeling
     // and return that feeling to retrieve the corresponding playlist. If tie, wtf do we do
@@ -233,12 +235,12 @@ const Quiz = (props) => {
   return (
     <div className="app">
       {showScore ? (
-        <div className="submit-quiz"> 
-          <button
-              onClick={() => props.handleFinalQuizAnswerClick(questions)}
-          > submit
+        <div className="submit-quiz">
+          <button onClick={() => props.handleFinalQuizAnswerClick(questions)}>
+            {" "}
+            submit
           </button>
-        </div>        
+        </div>
       ) : (
         <>
           <div className="question-section">
@@ -252,9 +254,11 @@ const Quiz = (props) => {
           <div className="answer-section">
             {questions[currentQuestion].answerOptions.map((answerOption) => (
               <button
-                onClick={() => {handleAnswerOptionClick(answerOption.mood); console.log(questions)}}
+                onClick={() => {
+                  handleAnswerOptionClick(answerOption.mood);
+                  console.log(questions);
+                }}
               >
-              
                 {answerOption.answerText}
               </button>
             ))}
