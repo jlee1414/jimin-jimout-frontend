@@ -39,6 +39,7 @@ const Quiz = (props) => {
         {
           answerText: "B: Watch TV, play on my phone, nothing too exciting.",
           isCorrect: false,
+          mood: "sad"
         }, //sad
         {
           answerText: "C: The same thing I do every day.",
@@ -190,20 +191,33 @@ const Quiz = (props) => {
     },
   ];
 
-  // does this go in App.js?
+  
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
   const [showScore, setShowScore] = useState(false);
 
-  const [question, setQuestion] = useState(false);
+  const [quizResults, setQuizResults] = useState(
+    {
+    "sad": 0,
+    "angry": 0,
+    "happy": 0,
+    "tired": 0,
+    });
 
   const [score, setScore] = useState(0);
 
-  const handleAnswerOptionClick = (isCorrect) => {
-
-    if (isCorrect) {
-      setScore(score + 1);
-    }
+  const handleAnswerOptionClick = (mood) => {
+    console.log(mood)
+    // if (mood) {
+    //   setScore(score + 1);
+    // }
+    const updatedQuizResults = {...quizResults}
+    // if (mood in updatedQuizResults) {
+    //   updatedQuizResults.mood += 1
+    // }
+    updatedQuizResults.mood = updatedQuizResults.mood + 1
+    setQuizResults(updatedQuizResults)
+    console.log(updatedQuizResults)
 
     // while loop that uses JSON as a frequency table to keep track of which answer the user is feeling
     // and return that feeling to retrieve the corresponding playlist. If tie, wtf do we do
@@ -238,7 +252,7 @@ const Quiz = (props) => {
           <div className="answer-section">
             {questions[currentQuestion].answerOptions.map((answerOption) => (
               <button
-                onClick={() => {handleAnswerOptionClick(answerOption.isCorrect); console.log(questions)}}
+                onClick={() => {handleAnswerOptionClick(answerOption.mood); console.log(questions)}}
               >
               
                 {answerOption.answerText}
