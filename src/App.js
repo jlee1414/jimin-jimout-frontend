@@ -30,17 +30,19 @@ export default function App() {
           };
         });
         setSpotifyData(pulledData);
-        console.log(pulledData);
+        // console.log(pulledData);
       })
       .catch((error) => {
         console.log("couldn't call api");
       });
   };
-  const handleFinalQuizAnswerClick = (questions) => {
-    console.log("Made it into final click quiz button or whatever-Fena")
-    console.log(questions)
-  }
 
+  const [finalQuizResult, setFinalQuizResult] = useState([]);
+  const handleFinalQuizAnswerClick = (answers) => {
+    console.log("Made it into final click quiz button or whatever-Fena");
+    console.log(answers);
+    console.log(spotifyData);
+  };
 
   return (
     <div className="App-Main">

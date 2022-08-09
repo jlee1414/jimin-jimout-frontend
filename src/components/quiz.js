@@ -209,8 +209,6 @@ const Quiz = (props) => {
   const [quizResults, setQuizResults] = useState(initalQuizResults);
 
   const handleAnswerOptionClick = (mood) => {
-    console.log(typeof mood);
-
     const updatedQuizResults = { ...quizResults };
     for (const quizMood in updatedQuizResults) {
       if (quizMood === mood) {
@@ -219,7 +217,7 @@ const Quiz = (props) => {
     }
 
     setQuizResults(updatedQuizResults);
-    console.log(updatedQuizResults);
+    // console.log(updatedQuizResults);
 
     // while loop that uses JSON as a frequency table to keep track of which answer the user is feeling
     // and return that feeling to retrieve the corresponding playlist. If tie, wtf do we do
@@ -236,7 +234,7 @@ const Quiz = (props) => {
     <div className="app">
       {showScore ? (
         <div className="submit-quiz">
-          <button onClick={() => props.handleFinalQuizAnswerClick(questions)}>
+          <button onClick={() => props.handleFinalQuizAnswerClick(quizResults)}>
             {" "}
             submit
           </button>
@@ -256,7 +254,6 @@ const Quiz = (props) => {
               <button
                 onClick={() => {
                   handleAnswerOptionClick(answerOption.mood);
-                  console.log(questions);
                 }}
               >
                 {answerOption.answerText}
