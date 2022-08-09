@@ -10,7 +10,7 @@ const Navbar = (props) => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/quiz" element={<Quiz handleFinalQuizAnswerClick={props.handleFinalQuizAnswerClick} />} />
         <Route path="/results" element={<Results />} />
       </Routes>
     </BrowserRouter>

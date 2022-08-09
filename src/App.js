@@ -36,28 +36,11 @@ export default function App() {
         console.log("couldn't call api");
       });
   };
+  const handleFinalQuizAnswerClick = (questions) => {
+    console.log("Made it into final click quiz button or whatever-Fena")
+    console.log(questions)
+  }
 
-  // const [currentQuestion, setCurrentQuestion] = useState(0);
-
-  // const [showScore, setShowScore] = useState(false);
-
-  // const [score, setScore] = useState(0);
-
-  // const handleAnswerOptionClick = (isCorrect) => {
-  //   if (isCorrect) {
-  //     setScore(score + 1);
-  //   }
-
-  //   // while loop that uses JSON as a frequency table to keep track of which answer the user is feeling
-  //   // and return that feeling to retrieve the corresponding playlist
-
-  //   const nextQuestion = currentQuestion + 1;
-  //   if (nextQuestion < questions.length) {
-  //     setCurrentQuestion(nextQuestion);
-  //   } else {
-  //     setShowScore(true);
-  //   }
-  // };
 
   return (
     <div className="App-Main">
@@ -76,7 +59,7 @@ export default function App() {
             <a href="http://localhost:3000/results">Result</a>
           </li>
         </ul>
-        <Navbar />
+        <Navbar handleFinalQuizAnswerClick={handleFinalQuizAnswerClick} />
       </div>
     </div>
   );

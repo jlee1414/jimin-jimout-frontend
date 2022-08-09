@@ -16,84 +16,8 @@ const Quiz = (props) => {
         }, //happy
         {
           answerText:
-            "C: Answer and don't say much. Conversation only lasts 5 minutes.",
-          isCorrect: true,
-          mood: "tired",
-        }, //tired
-        {
-          answerText: "D: Answer and begin ranting about everything you hate.",
-          isCorrect: false,
-          mood: "angry",
-        }, //angry
-      ],
-    },
-    {
-      questionText:
-        "The sun is shining, and the temperature is just right. What are you going to do today?",
-      answerOptions: [
-        {
-          answerText: "A: Get outside and do something great!",
-          isCorrect: false,
-          mood: "happy",
-        }, //happy
-        {
-          answerText: "B: Watch TV, play on my phone, nothing too exciting.",
-          isCorrect: true,
-          mood: "sad",
-        }, //sad
-        {
-          answerText: "C: The same thing I do every day.",
-          isCorrect: false,
-          mood: "tired",
-        }, //tired
-        {
-          answerText:
-            "D: Who knows - I'm sure someone will come along and ruin my day.",
-          isCorrect: false,
-          mood: "angry",
-        }, //angry
-      ],
-    },
-    {
-      questionText: "Choose a color:",
-      answerOptions: [
-        { answerText: "A: Beige", isCorrect: true, mood: "tired" }, //tired
-        { answerText: "B: Red", isCorrect: false, mood: "angry" }, //angry
-        { answerText: "C: Black", isCorrect: false, mood: "sad" }, //sad
-        { answerText: "D: Blue", isCorrect: false, mood: "happy" }, //happy
-      ],
-    },
-    {
-      questionText: "Do you worry a lot?",
-      answerOptions: [
-        { answerText: "A: All the time.", isCorrect: false, mood: "sad" }, //sad
-        {
-          answerText: "B: No, who has the time?",
-          isCorrect: false,
-          mood: "tired",
-        }, //tired
-        {
-          answerText: "C: Only about the big stuff.",
-          isCorrect: false,
-          mood: "happy",
-        }, //happy
-        { answerText: "D: Only about myself!", isCorrect: true, mood: "angry" }, //angry
-      ],
-    },
-    {
-      questionText: "Your friend calls you and wants to chat. You:",
-      answerOptions: [
-        //change the isCorrect to weight percentage later?
-        { answerText: "A: Ignore the call.", isCorrect: false, mood: "sad" }, //sad
-        {
-          answerText: "B: Answer and talk for over an hour!",
-          isCorrect: false,
-          mood: "happy",
-        }, //happy
-        {
-          answerText:
             "C: Answer and don't say much. Conversation only lasts 5-minutes.",
-          isCorrect: true,
+          isCorrect: false,
           mood: "tired",
         }, //tired
         {
@@ -114,8 +38,7 @@ const Quiz = (props) => {
         }, //happy
         {
           answerText: "B: Watch TV, play on my phone, nothing too exciting.",
-          isCorrect: true,
-          mood: "sad",
+          isCorrect: false,
         }, //sad
         {
           answerText: "C: The same thing I do every day.",
@@ -133,7 +56,7 @@ const Quiz = (props) => {
     {
       questionText: "Choose a color:",
       answerOptions: [
-        { answerText: "A: Beige", isCorrect: true, mood: "tired" }, //tired
+        { answerText: "A: Beige", isCorrect: false, mood: "tired" }, //tired
         { answerText: "B: Red", isCorrect: false, mood: "angry" }, //angry
         { answerText: "C: Black", isCorrect: false, mood: "sad" }, //sad
         { answerText: "D: Blue", isCorrect: false, mood: "happy" }, //happy
@@ -153,7 +76,7 @@ const Quiz = (props) => {
           isCorrect: false,
           mood: "happy",
         }, //happy
-        { answerText: "D: Only about myself!", isCorrect: true, mood: "angry" }, //angry
+        { answerText: "D: Only about myself!", isCorrect: false, mood: "angry" }, //angry
       ],
     },
     {
@@ -162,7 +85,7 @@ const Quiz = (props) => {
         { answerText: "A; Quit!", isCorrect: false, mood: "angry" }, //angry
         { answerText: "B: Go in late", isCorrect: false, mood: "tired" }, //tired
         { answerText: "C: Call in sick", isCorrect: false, mood: "sad" }, //sad
-        { answerText: "D; Go in!", isCorrect: true, mood: "happy" }, //happy
+        { answerText: "D; Go in!", isCorrect: false, mood: "happy" }, //happy
       ],
     },
     {
@@ -179,7 +102,7 @@ const Quiz = (props) => {
           isCorrect: false,
           mood: "angry",
         }, //angry
-        { answerText: "D: Snowy and cold.", isCorrect: true, mood: "tired" }, //tired
+        { answerText: "D: Snowy and cold.", isCorrect: false, mood: "tired" }, //tired
       ],
     },
     {
@@ -201,7 +124,7 @@ const Quiz = (props) => {
           isCorrect: false,
           mood: "happy",
         }, //happy
-        { answerText: "D: Time for myself?", isCorrect: true, mood: "sad" }, //sad
+        { answerText: "D: Time for myself?", isCorrect: false, mood: "sad" }, //sad
       ],
     },
     {
@@ -215,7 +138,7 @@ const Quiz = (props) => {
           isCorrect: false,
           mood: "happy",
         }, //happy
-        { answerText: "D: Go on a walk alone.", isCorrect: true, mood: "sad" }, //sad
+        { answerText: "D: Go on a walk alone.", isCorrect: false, mood: "sad" }, //sad
       ],
     },
     {
@@ -234,7 +157,7 @@ const Quiz = (props) => {
         }, //sad
         {
           answerText: "D: Ready for the day to end.",
-          isCorrect: true,
+          isCorrect: false,
           mood: "tired",
         }, //tired
       ],
@@ -260,7 +183,7 @@ const Quiz = (props) => {
         }, //sad
         {
           answerText: "D: I'm already on my way!",
-          isCorrect: true,
+          isCorrect: false,
           mood: "happy",
         }, //happy
       ],
@@ -272,9 +195,12 @@ const Quiz = (props) => {
 
   const [showScore, setShowScore] = useState(false);
 
+  const [question, setQuestion] = useState(false);
+
   const [score, setScore] = useState(0);
 
   const handleAnswerOptionClick = (isCorrect) => {
+
     if (isCorrect) {
       setScore(score + 1);
     }
@@ -293,9 +219,12 @@ const Quiz = (props) => {
   return (
     <div className="app">
       {showScore ? (
-        <div className="score-section">
-          You scored {score} out of {questions.length}
-        </div>
+        <div className="submit-quiz"> 
+          <button
+              onClick={() => props.handleFinalQuizAnswerClick(questions)}
+          > submit
+          </button>
+        </div>        
       ) : (
         <>
           <div className="question-section">
@@ -309,8 +238,9 @@ const Quiz = (props) => {
           <div className="answer-section">
             {questions[currentQuestion].answerOptions.map((answerOption) => (
               <button
-                onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}
+                onClick={() => {handleAnswerOptionClick(answerOption.isCorrect); console.log(questions)}}
               >
+              
                 {answerOption.answerText}
               </button>
             ))}
