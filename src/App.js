@@ -38,10 +38,31 @@ export default function App() {
   };
 
   const [finalQuizResult, setFinalQuizResult] = useState([]);
-  const handleFinalQuizAnswerClick = (answers) => {
+
+  const handleFinalQuizAnswerClick = (quizResults) => {
     console.log("Made it into final click quiz button or whatever-Fena");
-    console.log(answers);
+    console.log(quizResults);
     console.log(spotifyData);
+
+    // Result list  or call spotify API to create playlist 
+
+    // Junnie will do this 
+    // Loop through answers to find max mood
+    // If there's a tie, Store them in a list and randomize the list to get the mood
+
+
+    const max = Object.keys(quizResults).reduce((a, v) => Math.max(a, quizResults[v]), -Infinity);
+    const finalQuizResult = Object.keys(quizResults).filter(v => quizResults[v] === max);
+
+    console.log(finalQuizResult);
+
+    // Loop through spotify data with if conditionals
+    // 0-0.25 Angry
+    // 0.26-0.5 Sad
+    // 0.51-0.75 Tired
+    // 0.76-1 Happy
+
+    // Store song choice in finalQuizResult state variable
   };
 
   return (

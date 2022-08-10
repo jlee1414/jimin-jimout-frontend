@@ -236,7 +236,7 @@ const Quiz = (props) => {
         <div className="submit-quiz">
           <button onClick={() => props.handleFinalQuizAnswerClick(quizResults)}>
             {" "}
-            submit
+            SEE MY RESULTS
           </button>
         </div>
       ) : (
