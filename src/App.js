@@ -40,9 +40,9 @@ export default function App() {
   const [finalQuizResult, setFinalQuizResult] = useState([]);
 
   const handleFinalQuizAnswerClick = (quizResults) => {
-    console.log("Made it into final click quiz button or whatever-Fena");
-    console.log(quizResults);
-    console.log(spotifyData);
+    // console.log("Made it into final click quiz button or whatever-Fena");
+    // console.log(quizResults);
+    // console.log(spotifyData);
 
     // Result list  or call spotify API to create playlist 
 
@@ -54,7 +54,51 @@ export default function App() {
     const max = Object.keys(quizResults).reduce((a, v) => Math.max(a, quizResults[v]), -Infinity);
     const maxResult = Object.keys(quizResults).filter(v => quizResults[v] === max);
     
-    // if (maxResult === "angry") {
+  //   for(var i=0; i<spotifyData.length; i++) {
+  //     var obj = spotifyData[i];
+  //     for(var key in obj) {
+  //         var value = obj[key];
+  //         console.log(key+" = "+value);
+  //     }
+  // }
+    const valenceArray =[]
+    for (var i = 0; i < spotifyData.length; ++i) {
+      let valence = (spotifyData[i].valence);
+
+    
+
+      // Create an array to add songs within results
+      // Will have four nested if condition statements
+      // Outer if loop is checking for the mood
+      // Inner if loop is checking if valence value in within that range
+      // will have valence variable
+
+      if (maxResult.includes("angry")) {
+        if ("0" < "valence" < "0.25") {
+          console.log("made it into angry")
+          valenceArray.push(spotifyData[i])
+        }
+      };
+      if (maxResult.includes("sad")) {
+        if ("0.26" < "valence" < "0.50") {
+          console.log("made it into sad")
+          valenceArray.push(spotifyData[i])
+        
+      }};
+      if (maxResult.includes("tired")) {
+        if ("0.51" < "valence" < "0.75") {
+          console.log("made it into tired")
+          valenceArray.push(spotifyData[i])
+      }};
+      if (maxResult.includes("happy")) {
+        if ("0.76" < "valence" < "1") {
+          console.log("made it into happy")
+          valenceArray.push(spotifyData[i])
+      }};
+      
+    
+
+    // if ("angry" in maxResult) {
     //   spotifyData.valence === 0-0.25
     // };
     // if (maxResult === "sad") {
@@ -68,9 +112,12 @@ export default function App() {
     // };
 
     console.log(maxResult);
+    console.log(valenceArray);
+    
 
     // Store song choice in finalQuizResult state variable
   };
+};
 
   return (
     <div className="App-Main">
