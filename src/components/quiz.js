@@ -90,7 +90,7 @@ const Quiz = (props) => {
         { answerText: "A; Quit!", isCorrect: false, mood: "angry" }, //angry
         { answerText: "B: Go in late", isCorrect: false, mood: "tired" }, //tired
         { answerText: "C: Call in sick", isCorrect: false, mood: "sad" }, //sad
-        { answerText: "D; Go in!", isCorrect: false, mood: "happy" }, //happy
+        { answerText: "D: Go in!", isCorrect: false, mood: "happy" }, //happy
       ],
     },
     {
@@ -219,9 +219,6 @@ const Quiz = (props) => {
     setQuizResults(updatedQuizResults);
     // console.log(updatedQuizResults);
 
-    // while loop that uses JSON as a frequency table to keep track of which answer the user is feeling
-    // and return that feeling to retrieve the corresponding playlist. If tie, wtf do we do
-
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
@@ -238,7 +235,9 @@ const Quiz = (props) => {
             {" "}
             SEE MY RESULTS
           </button>
+          {/* I think we should have another button here that says "Take quiz again" */}
         </div>
+      
       ) : (
         <>
           <div className="question-section">

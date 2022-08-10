@@ -52,15 +52,22 @@ export default function App() {
 
 
     const max = Object.keys(quizResults).reduce((a, v) => Math.max(a, quizResults[v]), -Infinity);
-    const finalQuizResult = Object.keys(quizResults).filter(v => quizResults[v] === max);
+    const maxResult = Object.keys(quizResults).filter(v => quizResults[v] === max);
+    
+    // if (maxResult === "angry") {
+    //   spotifyData.valence === 0-0.25
+    // };
+    // if (maxResult === "sad") {
+    //   spotifyData.valence === 0.26-0.5
+    // };
+    // if (maxResult === "tired") {
+    // spotifyData.valence === 0.51-0.75
+    // };
+    // if (maxResult === "happy") {
+    //   spotifyData.valence === .76-1
+    // };
 
-    console.log(finalQuizResult);
-
-    // Loop through spotify data with if conditionals
-    // 0-0.25 Angry
-    // 0.26-0.5 Sad
-    // 0.51-0.75 Tired
-    // 0.76-1 Happy
+    console.log(maxResult);
 
     // Store song choice in finalQuizResult state variable
   };
