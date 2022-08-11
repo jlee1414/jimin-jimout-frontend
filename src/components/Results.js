@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import Proptypes from "prop-types";
 import "./Results.css";
 
-
 const Result = (props) => {
   const imgURL = props.song.imageUrl;
   const spotifyURL = "https://open.spotify.com/track/" + props.song.id;

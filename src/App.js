@@ -37,6 +37,7 @@ export default function App() {
   };
 
   const [finalQuizResult, setFinalQuizResult] = useState([]);
+  const [showResults, setShowResults] = useState(false);
 
   const handleFinalQuizAnswerClick = (quizResults) => {
     const max = Object.keys(quizResults).reduce(
@@ -75,8 +76,7 @@ export default function App() {
       }
     }
     setFinalQuizResult(valenceArray);
-    console.log(valenceArray);
-    // window.location.assign("http://localhost:3000/results");
+    setShowResults(true);
   };
 
   return (
@@ -92,13 +92,14 @@ export default function App() {
           <li>
             <a href="http://localhost:3000/quiz">Quiz</a>
           </li>
-          <li>
+          {/* <li>
             <a href="http://localhost:3000/results">Result</a>
-          </li>
+          </li> */}
         </ul>
         <Navbar
           handleFinalQuizAnswerClick={handleFinalQuizAnswerClick}
           quizResult={finalQuizResult}
+          showResults={showResults}
         />
       </div>
     </div>

@@ -6,6 +6,14 @@ import Quiz from "./Quiz";
 import ResultsList from "./ResultsList";
 
 const Navbar = (props) => {
+  console.log(props.showResults);
+  if (props.showResults) {
+    return (
+      <div>
+        <ResultsList quizResult={props.quizResult} />
+      </div>
+    );
+  }
   return (
     <BrowserRouter>
       <Routes>
@@ -17,10 +25,7 @@ const Navbar = (props) => {
               handleFinalQuizAnswerClick={props.handleFinalQuizAnswerClick}
             />
           }
-        />
-        <Route
-          path="/results"
-          element={<ResultsList quizResult={props.quizResult} />}
+          x
         />
       </Routes>
     </BrowserRouter>
