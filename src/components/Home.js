@@ -13,7 +13,8 @@ import VImage from "./images/V- GQ.jpeg";
 
 const Home = (props) => {
   const [bioState, setBioState] = useState(false);
-  const switchBio = () => {
+  const switchBio = (event) => {
+    console.log(event.target);
     // console.log("imageclicked");
     setBioState(true);
   };
