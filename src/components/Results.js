@@ -5,14 +5,19 @@ import "./Results.css";
 import { LinkPreview } from "@dhaiwat10/react-link-preview";
 
 const Result = (props) => {
+  const imgURL = props.song.imageUrl;
+  const spotifyURL = "https://open.spotify.com/track/" + props.song.id;
+
   return (
     <div>
-      <p>Song</p>
+      <p className="song-display">Song</p>
       {props.song.trackName}
-      <p>Artist</p>
+      <p className="artist-display">Artist</p>
       {props.song.artist}
       {props.quizResult}
-      {/* <LinkPreview url={URL} width="400px" /> */}
+      <a href={spotifyURL} target="_blank" rel="noreferrer">
+        <img src={imgURL} alt="Image not available"></img>
+      </a>
     </div>
   );
 };

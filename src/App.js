@@ -75,12 +75,14 @@ export default function App() {
       }
     }
     setFinalQuizResult(valenceArray);
+    console.log(valenceArray);
+    // window.location.assign("http://localhost:3000/results");
   };
 
   return (
     <div className="App-Main">
       <header className="App-Main-header">
-        <h1>Once you Jimin, you can't Jimout</h1>
+        <h2>Once you Jimin, you can't Jimout</h2>
       </header>
       <div>
         <ul id="nav-bar">
