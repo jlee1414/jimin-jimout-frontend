@@ -1,5 +1,9 @@
-.App-Main-header, h1 {
-    color: white
+.App-Main-header, h2 {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Camber-SB', 'NotoSansCJKkr-M';
+    background: black;
 }
 
 body {

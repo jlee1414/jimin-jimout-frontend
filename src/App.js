@@ -80,9 +80,10 @@ export default function App() {
   };
 
   return (
+    // <body className="appBody">
     <div className="App-Main">
       <header className="App-Main-header">
-        <h2>Once you Jimin, you can't Jimout</h2>
+        <h2>Once You Jimin, You Can't Jimout</h2>
       </header>
       <div>
         <ul id="nav-bar">
@@ -103,5 +104,6 @@ export default function App() {
         />
       </div>
     </div>
+    // </body>
   );
 }

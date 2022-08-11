@@ -1,8 +1,19 @@
-body {
+.homeBody {
     background: black
 };
 
-#bts {
+.bts, h1 {
     text-align:center;
-    font-size: 500px
+    font-size: 100px;
+    color: white;
+    font-family: 'Camber-SB', 'NotoSansCJKkr-M';
 }
+
+.btsPic {
+    /* background-image: url('public/images/bts-m.jpeg'); */
+    background-repeat: no-repeat;
+    width: 1050px;
+    height: 700px;
+    margin: auto;
+
+} 

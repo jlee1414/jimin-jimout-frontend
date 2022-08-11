@@ -16,7 +16,7 @@ const Navbar = (props) => {
   }
   return (
     <BrowserRouter>
-      <Routes>
+      <Routes className="nav">
         <Route path="/" element={<Home />} />
         <Route
           path="/quiz"
