@@ -42,7 +42,9 @@ const ResultsList = (props) => {
   const resultComponents = props.quizResult.map((song) => (
     <Results song={song} />
   ));
-  return <div>{resultComponents}</div>;
+  return (
+  <div>{resultComponents}</div>
+  )
 };
 
 export default ResultsList;
