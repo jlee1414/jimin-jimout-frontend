@@ -237,7 +237,6 @@ const Quiz = (props) => {
           </button>
           {/* I think we should have another button here that says "Take quiz again" */}
         </div>
-      
       ) : (
         <>
           <div className="question-section">

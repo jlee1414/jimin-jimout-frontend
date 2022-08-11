@@ -5,16 +5,12 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 
 export default function App() {
-  //Source of truth in App
-  //Axios call to backend
-  //Create hash map for quiz results
-  //Compare hashmap w/ spotify data
-
   const [spotifyData, setSpotifyData] = useState([]);
 
   useEffect(() => {
     getSpotifyApi();
   }, []);
+  const beginningURL = "https://open.spotify.com/track/";
 
   const getSpotifyApi = () => {
     axios
@@ -27,6 +23,9 @@ export default function App() {
             valence: entry.valence,
             id: entry.id,
             track: entry.trackName,
+            previewUrl: entry.previewUrl,
+            imageUrl: entry.imageUrl,
+            songUrl: beginningURL + entry.id,
           };
         });
         setSpotifyData(pulledData);
@@ -40,84 +39,43 @@ export default function App() {
   const [finalQuizResult, setFinalQuizResult] = useState([]);
 
   const handleFinalQuizAnswerClick = (quizResults) => {
-    // console.log("Made it into final click quiz button or whatever-Fena");
-    // console.log(quizResults);
-    // console.log(spotifyData);
+    const max = Object.keys(quizResults).reduce(
+      (a, v) => Math.max(a, quizResults[v]),
+      -Infinity
+    );
+    const maxResult = Object.keys(quizResults).filter(
+      (v) => quizResults[v] === max
+    );
 
-    // Result list  or call spotify API to create playlist 
+    let valenceArray = [];
 
-    // Junnie will do this 
-    // Loop through answers to find max mood
-    // If there's a tie, Store them in a list and randomize the list to get the mood
-
-
-    const max = Object.keys(quizResults).reduce((a, v) => Math.max(a, quizResults[v]), -Infinity);
-    const maxResult = Object.keys(quizResults).filter(v => quizResults[v] === max);
-    
-  //   for(var i=0; i<spotifyData.length; i++) {
-  //     var obj = spotifyData[i];
-  //     for(var key in obj) {
-  //         var value = obj[key];
-  //         console.log(key+" = "+value);
-  //     }
-  // }
-    const valenceArray =[]
     for (var i = 0; i < spotifyData.length; ++i) {
-      let valence = (spotifyData[i].valence);
-
-    
-
-      // Create an array to add songs within results
-      // Will have four nested if condition statements
-      // Outer if loop is checking for the mood
-      // Inner if loop is checking if valence value in within that range
-      // will have valence variable
+      let valenceData = parseFloat(spotifyData[i].valence);
+      console.log(typeof valenceData);
 
       if (maxResult.includes("angry")) {
-        if ("0" < "valence" < "0.25") {
-          console.log("made it into angry")
-          valenceArray.push(spotifyData[i])
+        if (0 <= valenceData && valenceData <= 0.25) {
+          valenceArray.push(spotifyData[i]);
         }
-      };
+      }
       if (maxResult.includes("sad")) {
-        if ("0.26" < "valence" < "0.50") {
-          console.log("made it into sad")
-          valenceArray.push(spotifyData[i])
-        
-      }};
+        if (0.26 <= valenceData && valenceData <= 0.5) {
+          valenceArray.push(spotifyData[i]);
+        }
+      }
       if (maxResult.includes("tired")) {
-        if ("0.51" < "valence" < "0.75") {
-          console.log("made it into tired")
-          valenceArray.push(spotifyData[i])
-      }};
+        if (0.51 <= valenceData && valenceData <= 0.75) {
+          valenceArray.push(spotifyData[i]);
+        }
+      }
       if (maxResult.includes("happy")) {
-        if ("0.76" < "valence" < "1") {
-          console.log("made it into happy")
-          valenceArray.push(spotifyData[i])
-      }};
-      
-    
-
-    // if ("angry" in maxResult) {
-    //   spotifyData.valence === 0-0.25
-    // };
-    // if (maxResult === "sad") {
-    //   spotifyData.valence === 0.26-0.5
-    // };
-    // if (maxResult === "tired") {
-    // spotifyData.valence === 0.51-0.75
-    // };
-    // if (maxResult === "happy") {
-    //   spotifyData.valence === .76-1
-    // };
-
-    console.log(maxResult);
-    console.log(valenceArray);
-    
-
-    // Store song choice in finalQuizResult state variable
+        if (0.76 <= valenceData && valenceData <= 1) {
+          valenceArray.push(spotifyData[i]);
+        }
+      }
+    }
+    setFinalQuizResult(valenceArray);
   };
-};
 
   return (
     <div className="App-Main">
@@ -136,7 +94,10 @@ export default function App() {
             <a href="http://localhost:3000/results">Result</a>
           </li>
         </ul>
-        <Navbar handleFinalQuizAnswerClick={handleFinalQuizAnswerClick} />
+        <Navbar
+          handleFinalQuizAnswerClick={handleFinalQuizAnswerClick}
+          quizResult={finalQuizResult}
+        />
       </div>
     </div>
   );

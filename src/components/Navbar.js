@@ -18,7 +18,10 @@ const Navbar = (props) => {
             />
           }
         />
-        <Route path="/results" element={<ResultsList />} />
+        <Route
+          path="/results"
+          element={<ResultsList quizResult={props.quizResult} />}
+        />
       </Routes>
     </BrowserRouter>
   );
