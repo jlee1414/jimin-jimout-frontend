@@ -1,8 +1,8 @@
 import "./Home.css";
 import Proptypes from "prop-types";
 import { useState } from "react";
-import btspic from "src/images/Group_2.png";
-// /Users/fenadang/ada/Capstone/jimin-jimout-frontend/src/images/Group_2.jpeg
+import JkImage from "./images/Group_2.png";
+
 const Home = (props) => {
   return (
     <body className="homeBody">
@@ -11,10 +11,13 @@ const Home = (props) => {
       </div>
       <div>
         <img
-          className="btsPic"
+          className="btsMainPic"
           src="https://ibighit.com/bts/images/profile/proof/member/bts-pc.jpg"
           alt="group"
         />
+      </div>
+      <div>
+        <img className="JkPic" src={JkImage} alt="JK" />
       </div>
     </body>
   );
