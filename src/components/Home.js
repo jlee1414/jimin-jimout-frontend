@@ -1,9 +1,25 @@
 import "./Home.css";
 import Proptypes from "prop-types";
 import { useState } from "react";
-import JkImage from "./images/Group_2.png";
+import Quiz from "./Quiz";
+import Bio from "./Bio";
+import JkImage from "./images/JK- sultry.webp";
+import JinImage from "./images/Jin-hair-back.jpeg";
+import RMImage from "./images/RM-Vegas.webp";
+import JHopeImage from "./images/j-hope.webp";
+import JiminImage from "./images/Jimin-wow.jpeg";
+import SugaImage from "./images/Suga.jpeg";
+import VImage from "./images/V- GQ.jpeg";
 
 const Home = (props) => {
+  const [bioState, setBioState] = useState(false);
+  const switchBio = () => {
+    // console.log("imageclicked");
+    setBioState(true);
+  };
+  if (bioState) {
+    <Bio></Bio>;
+  }
   return (
     <body className="homeBody">
       <div className="bts">
@@ -16,8 +32,14 @@ const Home = (props) => {
           alt="group"
         />
       </div>
-      <div>
-        <img className="JkPic" src={JkImage} alt="JK" />
+      <div className="MembersImages">
+        <img className="JkPic" src={JkImage} alt="JK" onClick={switchBio} />
+        <img className="JinPic" src={JinImage} alt="Jin" />
+        <img className="RMPic" src={RMImage} alt="RM" />
+        <img className="JHopePic" src={JHopeImage} alt="JHope" />
+        <img className="JiminPic" src={JiminImage} alt="Jimin" />
+        <img className="SugaPic" src={SugaImage} alt="Suga" />
+        <img className="VPic" src={VImage} alt="V" />
       </div>
     </body>
   );

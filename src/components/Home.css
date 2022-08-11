@@ -9,7 +9,7 @@
     font-family: 'Camber-SB', 'NotoSansCJKkr-M';
 }
 
-.btsPic {
+.btsMainPic {
     /* background-image: url('public/images/bts-m.jpeg'); */
     background-repeat: no-repeat;
     width: 1050px;
@@ -17,3 +17,10 @@
     margin: auto;
 
 } 
+
+.MembersImages {
+    margin: 10px;
+    display: flex;
+    width: 400px;
+    height: 400px;
+}
