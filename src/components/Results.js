@@ -2,7 +2,6 @@ import Quiz from "./Quiz.js";
 import { useState, useEffect } from "react";
 import Proptypes from "prop-types";
 import "./Results.css";
-import { LinkPreview } from "@dhaiwat10/react-link-preview";
 
 const Result = (props) => {
   const imgURL = props.song.imageUrl;
