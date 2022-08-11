@@ -5,11 +5,11 @@ import { useState } from "react";
 const Home = (props) => {
   return (
     <body className="homeBody">
-      <div>
-        <h1 className="bts"> BTS </h1>
+      <div className="bts">
+        <h1> BTS </h1>
       </div>
-      <div className="btsPic">
-
+      <div>
+        <img className="btsPic" src="https://ibighit.com/bts/images/profile/proof/member/bts-pc.jpg" alt="group"/>
       </div>
     </body>
   );
