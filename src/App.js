@@ -40,6 +40,7 @@ export default function App() {
   const [showResults, setShowResults] = useState(false);
 
   const handleFinalQuizAnswerClick = (quizResults) => {
+    console.log("made it to submit button function");
     const max = Object.keys(quizResults).reduce(
       (a, v) => Math.max(a, quizResults[v]),
       -Infinity
@@ -75,6 +76,7 @@ export default function App() {
         }
       }
     }
+    console.log("final quiz result is" + valenceArray);
     setFinalQuizResult(valenceArray);
     setShowResults(true);
   };
