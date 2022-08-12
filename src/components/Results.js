@@ -2,11 +2,13 @@ import Quiz from "./Quiz.js";
 import { useState, useEffect } from "react";
 import Proptypes from "prop-types";
 import "./Results.css";
+import ReactAudioPlayer from "react-audio-player";
 
 const Result = (props) => {
   console.log(props.song);
   const imgURL = props.song.imageUrl;
   const spotifyURL = "https://open.spotify.com/track/" + props.song.id;
+  const audioPreiew = props.song.previewUrl;
 
   return (
     <body className="resultsBody">
@@ -23,6 +25,7 @@ const Result = (props) => {
         >
           <img src={imgURL} alt="Image not available"></img>
         </a>
+        <ReactAudioPlayer src={audioPreiew} controls />
       </div>
     </body>
   );
