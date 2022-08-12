@@ -85,7 +85,7 @@ export default function App() {
       <header className="App-Main-header">
         <h2>Once You Jimin, You Can't Jimout</h2>
       </header>
-      <div>
+      <div className="navigation-bar-app-page">
         <ul id="nav-bar">
           <li>
             <a href="http://localhost:3000/">Home</a>

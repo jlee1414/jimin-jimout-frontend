@@ -1,4 +1,6 @@
 .nav {
     text-align: right;
     list-style-position: inside;
+    display: flex;
+    flex-direction: row;
 }
