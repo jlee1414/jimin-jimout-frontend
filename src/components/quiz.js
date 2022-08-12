@@ -87,7 +87,7 @@ const Quiz = (props) => {
     {
       questionText: "It's Monday morning, and you have to go to work. You:",
       answerOptions: [
-        { answerText: "A; Quit!", isCorrect: false, mood: "angry" }, //angry
+        { answerText: "A: Quit!", isCorrect: false, mood: "angry" }, //angry
         { answerText: "B: Go in late", isCorrect: false, mood: "tired" }, //tired
         { answerText: "C: Call in sick", isCorrect: false, mood: "sad" }, //sad
         { answerText: "D: Go in!", isCorrect: false, mood: "happy" }, //happy
@@ -97,7 +97,7 @@ const Quiz = (props) => {
       questionText: "What is your favorite kind of weather?",
       answerOptions: [
         {
-          answerText: "A: Doesn't matter! Any day is beautiful!",
+          answerText: "A: Sunny and warm!",
           isCorrect: false,
           mood: "happy",
         }, //happy
