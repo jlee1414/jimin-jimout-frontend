@@ -10,6 +10,9 @@ img {
 .artist-display {
     color: white;
 }
+.playlist {
+    display: flex;
+}
 
 .resultsBody {
     margin: 0;
@@ -25,19 +28,19 @@ img {
     }
     
 .resultsBody {
-background-color: #7cc6fe;
-display: flex;
-justify-content: center;
-align-items: center;
-min-height: 100vh;
-background: #a8c0ff;
-background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);
-background: linear-gradient(to right, #3f2b96, #a8c0ff); 
-padding-top: 80px;
-overflow-y: hidden;
+    background-color: #7cc6fe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #a8c0ff;
+    background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);
+    background: linear-gradient(to right, #3f2b96, #a8c0ff); 
+    padding-top: 80px;
+    overflow-y: hidden;
 }
 
-.playlist {
+/* .playlist {
     margin:auto
-}
+} */
 

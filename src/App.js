@@ -40,7 +40,7 @@ export default function App() {
   const [showResults, setShowResults] = useState(false);
 
   const handleFinalQuizAnswerClick = (quizResults) => {
-    console.log("made it to submit button function");
+    // console.log("made it to submit button function");
     const max = Object.keys(quizResults).reduce(
       (a, v) => Math.max(a, quizResults[v]),
       -Infinity
@@ -76,7 +76,7 @@ export default function App() {
         }
       }
     }
-    console.log("final quiz result is" + valenceArray);
+    // console.log("final quiz result is" + valenceArray);
     setFinalQuizResult(valenceArray);
     setShowResults(true);
   };
@@ -89,15 +89,18 @@ export default function App() {
       </header>
       <div className="navigation-bar-app-page">
         <ul id="nav-bar">
-          <li>
+          {/* <li>
             <a href="https://jimin-jimout.herokuapp.com/">Home</a>
           </li>
           <li>
             <a href="https://jimin-jimout.herokuapp.com/quiz">Quiz</a>
-          </li>
-          {/* <li>
-            <a href="http://localhost:3000/results">Result</a>
           </li> */}
+          <li>
+            <a href="http://localhost:3000/">Home</a>
+          </li>
+          <li>
+            <a href="http://localhost:3000/quiz">Quiz</a>
+          </li>
         </ul>
         <Navbar
           handleFinalQuizAnswerClick={handleFinalQuizAnswerClick}
