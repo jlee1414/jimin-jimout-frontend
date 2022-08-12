@@ -88,10 +88,10 @@ export default function App() {
       <div className="navigation-bar-app-page">
         <ul id="nav-bar">
           <li>
-            <a href="http://localhost:3000/">Home</a>
+            <a href="https://jimin-jimout.herokuapp.com/">Home</a>
           </li>
           <li>
-            <a href="http://localhost:3000/quiz">Quiz</a>
+            <a href="https://jimin-jimout.herokuapp.com/quiz">Quiz</a>
           </li>
           {/* <li>
             <a href="http://localhost:3000/results">Result</a>
