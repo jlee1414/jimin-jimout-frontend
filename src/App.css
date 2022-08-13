@@ -1,10 +1,10 @@
-.homeBody {
+/* .homeBody {
     display: grid;
     grid-template-columns: 150px 150px 150px 150px;
     grid-template-rows: auto auto auto auto;
     grid-gap: 20px;
     justify-items: space-evenly;
-}
+} */
 
 
 .App-Main-header, h2 {
@@ -30,5 +30,5 @@ body {
 }
 
 .membersImages {
-    
+
 }

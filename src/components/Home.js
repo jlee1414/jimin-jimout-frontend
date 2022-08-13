@@ -11,6 +11,7 @@ import JHopeImage from "./images/j-hope.webp";
 import JiminImage from "./images/Jimin-wow.jpeg";
 import SugaImage from "./images/Suga.jpeg";
 import VImage from "./images/V- GQ.jpeg";
+import { Button } from "@material-ui/core";
 
 const bios = {
   Jk: "Golden magnae",
@@ -53,7 +54,7 @@ const Home = (props) => {
         <div>
           <p>{memberBio}</p>
         </div>
-        <button onClick={backToHomePage}>Back</button>
+        <Button variant="contained" color= "primary" onClick={backToHomePage}>Back</Button>
       </body>
     );
   }

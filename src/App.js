@@ -3,6 +3,9 @@ import axios from "axios";
 import "./App.css";
 
 import Navbar from "./components/Navbar";
+import { Button } from "@material-ui/core";
+import {TextField} from '@material-ui/core';
+import AccountCircle from '@material-ui/icons/AccountCircle';
 
 export default function App() {
   const [spotifyData, setSpotifyData] = useState([]);
@@ -108,7 +111,18 @@ export default function App() {
           showResults={showResults}
         />
       </div>
+      {/* <div className="App">
+    <br/>
+      <Navbar/>
+      <Button color="primary" variant="contained"> Press me </Button> 
+      <br/><br/>
+      <TextField id="outlined-basic" label="Name" variant="outlined" />
+      <br/><br/>
+      <AccountCircle/>
+
+    </div> */}
+
     </div>
     // </body>
   );
-}
+  };
