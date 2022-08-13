@@ -10,7 +10,7 @@ import JinImage from "./images/Jin-hair-back.jpeg";
 import RMImage from "./images/RM-Vegas.webp";
 import JHopeImage from "./images/Jhope-cute.jpeg";
 import JiminImage from "./images/Jimin-wow.jpeg";
-import SugaImage from "./images/Suga.jpeg";
+import SugaImage from "./images/suga-profile.jpeg";
 import VImage from "./images/V- GQ.jpeg";
 import {Button} from "@material-ui/core";
 
