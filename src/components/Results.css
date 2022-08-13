@@ -9,6 +9,7 @@ img {
 }
 .artist-display {
     color: white;
+    font-size: 25px
 }
 .playlist {
     display: flex;

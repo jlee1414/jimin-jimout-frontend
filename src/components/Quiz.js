@@ -207,7 +207,7 @@ const Quiz = (props) => {
   };
 
   const [quizResults, setQuizResults] = useState(initalQuizResults);
-
+  
   const handleAnswerOptionClick = (mood) => {
     const updatedQuizResults = { ...quizResults };
     for (const quizMood in updatedQuizResults) {

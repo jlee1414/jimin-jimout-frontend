@@ -14,7 +14,7 @@ const Result = (props) => {
     <body className="resultsBody">
       <div className="playlist">
         <p className="song-display">Song: {props.song.track}</p>
-
+       
         <p className="artist-display">Artist: {props.song.artist}</p>
 
         <a
