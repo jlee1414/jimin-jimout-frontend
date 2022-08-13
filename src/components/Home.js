@@ -13,7 +13,7 @@ import SugaImage from "./images/Suga.jpeg";
 import VImage from "./images/V- GQ.jpeg";
 
 const bios = {
-  Jk: "Jk bio",
+  Jk: "Golden magnae",
   RM: "RM bio",
   Jhope: "Jhope bio",
   Jimin: "Jimin bio",
@@ -69,10 +69,23 @@ const Home = (props) => {
           alt="group"
         />
       </div>
-      <div className="MembersImages">
-        <img className="Jk" src={JkImage} alt="JK" onClick={switchBio} />
-        <img className="Jin" src={JinImage} alt="Jin" onClick={switchBio} />
-        <img className="RM" src={RMImage} alt="RM" onClick={switchBio} />
+      <div className="m embersImages">
+        <img className="Jk" 
+          src={JkImage} 
+          alt="JK" 
+          onClick={switchBio} />
+        <img 
+          className="Jin" 
+          src={JinImage} 
+          alt="Jin" 
+          onClick={switchBio} 
+          />
+        <img 
+          className="RM" 
+          src={RMImage} 
+          alt="RM" 
+          onClick={switchBio} 
+          />
         <img
           className="JHope"
           src={JHopeImage}
@@ -85,8 +98,16 @@ const Home = (props) => {
           alt="Jimin"
           onClick={switchBio}
         />
-        <img className="Suga" src={SugaImage} alt="Suga" onClick={switchBio} />
-        <img className="V" src={VImage} alt="V" onClick={switchBio} />
+        <img 
+          className="Suga" 
+          src={SugaImage} 
+          alt="Suga" 
+          onClick={switchBio} />
+        <img 
+          className="V" 
+          src={VImage} 
+          alt="V" 
+          onClick={switchBio} />
       </div>
     </body>
   );

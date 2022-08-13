@@ -8,7 +8,7 @@ const Result = (props) => {
   console.log(props.song);
   const imgURL = props.song.imageUrl;
   const spotifyURL = "https://open.spotify.com/track/" + props.song.id;
-  const audioPreiew = props.song.previewUrl;
+  const audioPreview = props.song.previewUrl;
 
   return (
     <body className="resultsBody">
@@ -23,9 +23,9 @@ const Result = (props) => {
           target="_blank"
           rel="noreferrer"
         >
-          <img src={imgURL} alt="Image not available"></img>
+          <img src={imgURL} alt="Not available"></img>
         </a>
-        <ReactAudioPlayer src={audioPreiew} controls />
+        <ReactAudioPlayer src={audioPreview} controls />
       </div>
     </body>
   );
