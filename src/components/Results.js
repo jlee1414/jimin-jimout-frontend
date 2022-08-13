@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Proptypes from "prop-types";
 import "./Results.css";
 import ReactAudioPlayer from "react-audio-player";
+import { Typography } from "@material-ui/core";
 
 const Result = (props) => {
   console.log(props.song);
@@ -13,9 +14,16 @@ const Result = (props) => {
   return (
     <body className="resultsBody">
       <div className="playlist">
-        <p className="song-display">Song: {props.song.track}</p>
-       
-        <p className="artist-display">Artist: {props.song.artist}</p>
+        <Typography color="white" align="center" variant="h4">
+          Thank you for taking the quiz! It seems you are currently (mood). 
+          Here are some songs to keep you company during your frame of mind.
+        </Typography>
+        <Typography className="song-display" color="white" align="center">
+          Song: {props.song.track}
+          </Typography>
+        <Typography className="artist-display" color="white" align="center">
+          Artist: {props.song.artist}
+          </Typography>
 
         <a
           className="artist-image"
