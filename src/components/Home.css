@@ -1,27 +1,94 @@
 .homeBody {
-    background: black
+    background: #a8c0ff;
+    background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);
+    background: linear-gradient(to right, #3f2b96, #a8c0ff); 
 };
 
-.bts, h1 {
-    text-align:center;
-    font-size: 100px;
-    color: white;
-    font-family: 'Camber-SB', 'NotoSansCJKkr-M';
+.btsText{
 }
 
 .btsMainPic {
-    /* background-image: url('public/images/bts-m.jpeg'); */
+    /* background-image: url('./images/bts-m.jpeg'); */
     background-repeat: no-repeat;
     width: 1050px;
     height: 700px;
-    margin: auto;
-
+    place-items: center;
+    display: block;
+    margin: 0 auto;
+    padding: 50px
 } 
 
-.MembersImages {
+
+
+.membersImages {
     margin: 10px;
-    display: flex;
+    width: 800px;
+    height: 800px;
+    padding: 50px;
+    float: left;
+    width: auto;
+    text-align: center;
+    font-size: 25px;
+}
+
+.Jk {
+    padding: 15px;
+    width: 475px;
+    height: 500px;
+    grid-column:1;
+    grid-row: 3;
+}
+
+.Jin {
+    padding: 15px;
+    width: 325px;
+    height: 450px;
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.RM {
+    padding: 15px;
+    width: 325px;
+    height: 450px;
+    grid-column: 2/4;
+    grid-row: 3;
+}
+
+.Jhope {
+    padding: 15px;
     width: 400px;
+    height: 500px;
+    grid-column: 2/4;
+    grid-row: 3;
+}
+
+.Jimin {
+    padding: 15px;
+    width: 350px;
+    height: 450px;
+    grid-column: 2/4;
+    grid-row: 3;
+}
+
+.Suga {
+    padding: 15px;
+    width: 525px;
     height: 400px;
+    grid-column: 2/4;
+    grid-row: 3;
+}
+
+.V {
+    padding: 15px;
+    width: 350px;
+    height: 450px;
+    grid-column: 2/4;
+    grid-row: 3;
+}
+
+.memberBio {
+    padding: 25px;
+    font-size: 25px;
 }
 

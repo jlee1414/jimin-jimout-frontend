@@ -1,5 +1,6 @@
 import "./Home.css";
 import Proptypes from "prop-types";
+import {Grid} from "@material-ui/core";
 
 import { useState } from "react";
 import Quiz from "./Quiz";
@@ -7,20 +8,21 @@ import Bio from "./Bio";
 import JkImage from "./images/JK- sultry.webp";
 import JinImage from "./images/Jin-hair-back.jpeg";
 import RMImage from "./images/RM-Vegas.webp";
-import JHopeImage from "./images/j-hope.webp";
+import JHopeImage from "./images/Jhope-cute.jpeg";
 import JiminImage from "./images/Jimin-wow.jpeg";
 import SugaImage from "./images/Suga.jpeg";
 import VImage from "./images/V- GQ.jpeg";
-import { Button } from "@material-ui/core";
+import {Button} from "@material-ui/core";
+
 
 const bios = {
-  Jk: "Golden magnae",
-  RM: "RM bio",
-  Jhope: "Jhope bio",
-  Jimin: "Jimin bio",
-  V: "V bio",
-  Suga: "Suga bio",
-  Jin: "Jin bio",
+  Jk: "Name: Jeon Jung Kook, otherwise known as 'Golden Maknae'. Birthday: September 1, 1997. Vocal line.",
+  RM: "Name: Kim Nam Joon, otherwise known as RM or Rap Monster. Birthday: September 12, 1994. Rap line.",
+  Jhope: "Name: Jung Ho Seok, otherwise known as J-Hope. Birthday: February 18, 1994. Rap line.",
+  Jimin: "Name: Park Jimin. Birthday: October 13, 1995. Vocal line.",
+  V: "Name: Kim Tae Hyung, otherwise known as V. Birthday: February 18, 1995. Vocal line.",
+  Suga: "Name: Min Yoongi, otherwise known as Suga, otherwise known as Agust D. Birthday: March 9, 1993. Rap line.",
+  Jin: "Name: Kim Seok Jin, otherwise known as 'World Wide Handsome'. Birthday: December 4, 1992. Vocal line.",
 };
 
 const Home = (props) => {
@@ -29,9 +31,9 @@ const Home = (props) => {
   const switchBio = (event) => {
     setBioState(true);
     // console.log(event.target.className);
-    const memeber = event.target.className;
+    const member = event.target.className;
     // console.log("imageclicked");
-    setMemberBio(bios[memeber]);
+    setMemberBio(bios[member]);
     // console.log(memeberBio);
   };
 
@@ -41,9 +43,6 @@ const Home = (props) => {
   if (bioState) {
     return (
       <body className="homeBody">
-        <div className="bts">
-          <h1> BTS </h1>
-        </div>
         <div>
           <img
             className="btsMainPic"
@@ -51,30 +50,36 @@ const Home = (props) => {
             alt="group"
           />
         </div>
-        <div>
+        <div className="memberBio">
+          <Grid container justify="center">
           <p>{memberBio}</p>
+          </Grid>
         </div>
-        <Button variant="contained" color= "primary" onClick={backToHomePage}>Back</Button>
+          <Grid container justify="center">
+            <Button
+            className="backtoArtistsButton"
+            variant="contained" 
+            color= "secondary" 
+            onClick={backToHomePage}>
+            BACK TO MEMBERS
+            </Button>
+          </Grid>
       </body>
     );
   }
   return (
     <body className="homeBody">
-      <div className="bts">
-        <h1> BTS </h1>
-      </div>
       <div>
+        <Grid container justify="center">
         <img
           className="btsMainPic"
           src="https://ibighit.com/bts/images/profile/proof/member/bts-pc.jpg"
           alt="group"
         />
+        </Grid>
       </div>
-      <div className="m embersImages">
-        <img className="Jk" 
-          src={JkImage} 
-          alt="JK" 
-          onClick={switchBio} />
+      <div className="membersImages">
+        <h1>THE MEMBERS</h1>
         <img 
           className="Jin" 
           src={JinImage} 
@@ -87,11 +92,11 @@ const Home = (props) => {
           alt="RM" 
           onClick={switchBio} 
           />
-        <img
-          className="JHope"
-          src={JHopeImage}
-          alt="JHope"
-          onClick={switchBio}
+        <img 
+          className="V" 
+          src={VImage} 
+          alt="V" 
+          onClick={switchBio} 
         />
         <img
           className="Jimin"
@@ -99,16 +104,23 @@ const Home = (props) => {
           alt="Jimin"
           onClick={switchBio}
         />
+        <img className="Jk" 
+          src={JkImage} 
+          alt="JK" 
+          onClick={switchBio} 
+        />
         <img 
           className="Suga" 
           src={SugaImage} 
           alt="Suga" 
-          onClick={switchBio} />
-        <img 
-          className="V" 
-          src={VImage} 
-          alt="V" 
-          onClick={switchBio} />
+          onClick={switchBio} 
+          />
+        <img
+          className="Jhope"
+          src={JHopeImage}
+          alt="JHope"
+          onClick={switchBio}
+        />
       </div>
     </body>
   );
