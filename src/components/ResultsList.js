@@ -1,8 +1,6 @@
-import { useState, useEffect } from "react";
-import Proptypes from "prop-types";
+import PropTypes from "prop-types";
 import "./ResultsList.css";
 import Results from "./Results";
-import axios from "axios";
 
 const ResultsList = (props) => {
   console.log(props.quizResult);
@@ -10,6 +8,10 @@ const ResultsList = (props) => {
     <Results song={song} />
   ));
   return <div>{resultComponents}</div>;
+};
+
+ResultsList.propTypes = {
+  quizResult: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default ResultsList;
