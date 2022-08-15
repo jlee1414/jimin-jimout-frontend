@@ -19,7 +19,8 @@
     box-shadow: 6px 4px 8px;
     border-width: 3em ;
     border-radius: 15px 15px;
-    width: 500px;
+    width: 300px;
+    height: 300px;
     color: black;
     display: block;
     margin-left: auto;
@@ -35,31 +36,27 @@
     
     
 .resultsBody {
-    /* background-color: #7cc6fe; */
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center;
-    min-height: 100vh; */
-    /* background: #a8c0ff;
-    background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);
-    background: linear-gradient(to right, #3f2b96, #a8c0ff);  */
-    /* padding-top: 20px; */
+
+    padding-top: 20px;
     /* overflow-y: hidden; */
+    /* display: block; */
+    /* margin-left: auto;
+    margin-right: auto; */
+    padding: 20px;
+    float:left;
+    position: relative;
+    /* text-align: center;
+    justify-content: center;
+    align-items: center; */
+
+}
+
+.artist-image img{
+    width: 200px;
+    height: 200px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 40px 
-}
-
-
-
-
-.artist-image img{
-    width: 300px;
-    height: 300px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto 
 }
 
 .reactAudioPlayer {
