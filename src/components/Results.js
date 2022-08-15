@@ -29,11 +29,11 @@ const Result = (props) => {
         />
         </Grid>
       </div> */}
-      <div>
+      {/* <div>
         <Typography color="white" align="center" variant="h4">
             According to the quiz, you are [mood]. 
         </Typography>
-      </div>
+      </div> */}
         <div className="playlist">
           <Typography className="song-display" align="center" variant="h4">
             Song: {props.song.track}
