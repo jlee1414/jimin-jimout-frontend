@@ -4,14 +4,18 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Quiz from "./Quiz";
 import ResultsList from "./ResultsList";
-import {AppBar, Toolbar, Typography} from '@material-ui/core';
+// import { AppBar, Toolbar, Typography } from "@material-ui/core";
+import PropTypes from "prop-types";
 
 const Navbar = (props) => {
-  console.log(props.showResults);
   if (props.showResults) {
     return (
       <div>
-        <ResultsList quizResult={props.quizResult} />
+        <ResultsList
+          quizResult={props.quizResult}
+          moodResult={props.moodResult}
+          retakeQuiz={props.retakeQuiz}
+        />
       </div>
     );
   }
@@ -30,13 +34,12 @@ const Navbar = (props) => {
         />
       </Routes>
     </BrowserRouter>
-    // <AppBar position='static'>
-    // <Toolbar>
-    //     <Typography>React Navbar Example</Typography>
-    // </Toolbar>
-    // </AppBar>
-
-);
-  };
+  );
+};
+Navbar.propTypes = {
+  quizResult: PropTypes.array.isRequired,
+  handleFinalQuizAnswerClick: PropTypes.func.isRequired,
+  retakeQuiz: PropTypes.func.isRequired,
+};
 
 export default Navbar;

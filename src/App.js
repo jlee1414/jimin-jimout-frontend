@@ -3,21 +3,18 @@ import axios from "axios";
 import "./App.css";
 import btsLogoImage from "./components/images/BTS-army-logo.jpg";
 
-
 import Navbar from "./components/Navbar";
 import { Box, Button } from "@material-ui/core";
-import { ThemeProvider, createTheme} from '@material-ui/core/styles';
-import {Grid} from "@material-ui/core";
-
-
+import { ThemeProvider, createTheme } from "@material-ui/core/styles";
+import { Grid } from "@material-ui/core";
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#8965b3',
+      main: "#8965b3",
     },
     secondary: {
-      main: '#a68cc6',
+      main: "#a68cc6",
     },
   },
 });
@@ -34,7 +31,6 @@ export default function App() {
     axios
       .get("https://jimin-jimout-backend.herokuapp.com/api")
       .then((response) => {
-        // console.log(response.data);
         const pulledData = response.data.map((entry) => {
           return {
             artist: entry.artist,
@@ -47,7 +43,6 @@ export default function App() {
           };
         });
         setSpotifyData(pulledData);
-        // console.log(pulledData);
       })
       .catch((error) => {
         console.log("couldn't call api");
@@ -56,9 +51,9 @@ export default function App() {
 
   const [finalQuizResult, setFinalQuizResult] = useState([]);
   const [showResults, setShowResults] = useState(false);
+  const [finalMoodResult, setFinalMoodResult] = useState([]);
 
   const handleFinalQuizAnswerClick = (quizResults) => {
-    // console.log("made it to submit button function");
     const max = Object.keys(quizResults).reduce(
       (a, v) => Math.max(a, quizResults[v]),
       -Infinity
@@ -66,6 +61,7 @@ export default function App() {
     const maxResult = Object.keys(quizResults).filter(
       (v) => quizResults[v] === max
     );
+    setFinalMoodResult(maxResult);
 
     let valenceArray = [];
 
@@ -94,9 +90,13 @@ export default function App() {
         }
       }
     }
-    // console.log("final quiz result is" + valenceArray);
+
     setFinalQuizResult(valenceArray);
     setShowResults(true);
+  };
+
+  const retakeQuiz = () => {
+    setShowResults(false);
   };
 
   return (
@@ -105,63 +105,43 @@ export default function App() {
         <header className="App-Main-header">
           <h2>BTS</h2>
         </header>
-        {/* <nav class="capstone-name">
-          <div class="container-capstone">
-            <a class="brand" href="#">
-              <strong>Once you Jimin, You can't Jimouit</strong>
-            </a>
-          </div>
-        </nav> */}
         <div className="navigation-bar-app-page">
           <Grid container justify="center">
-            <Button id="homeButton"
-              href="http://localhost:3000/" 
+            <Button
+              id="homeButton"
+              href="http://localhost:3000/"
               size="small"
               variant="contained"
               color="primary"
-              > 
+            >
               HOME
             </Button>
             <img
-            className="btsLogo"
-            src={btsLogoImage}
-            alt="btslogo"
-            // style={"padding-top: 15px;"}
+              className="btsLogo"
+              src={btsLogoImage}
+              alt="btslogo"
+              // style={"padding-top: 15px;"}
             />
-            <Button id="quizButton"
-              href="http://localhost:3000/quiz" 
+            <Button
+              id="quizButton"
+              href="http://localhost:3000/quiz"
               size="small"
               variant="contained"
               color="primary"
-              > 
+            >
               QUIZ
             </Button>
           </Grid>
-          {/* <ul id="nav-bar"> */}
-            {/* <li>
-              <a href="https://jimin-jimout.herokuapp.com/">Home</a>
-            </li>
-            <li>
-              <a href="https://jimin-jimout.herokuapp.com/quiz">Quiz</a>
-            </li> */}
-            {/* <li>
-              <a href="http://localhost:3000/">Home</a>
-            </li>
-            <li>
-              <a href="http://localhost:3000/quiz">Quiz</a>
-            </li>
-          </ul> */}
           <Navbar
             handleFinalQuizAnswerClick={handleFinalQuizAnswerClick}
             quizResult={finalQuizResult}
+            moodResult={finalMoodResult}
             showResults={showResults}
+            retakeQuiz={retakeQuiz}
           />
         </div>
-        <footer>
-      
-        </footer>
+        <footer></footer>
       </div>
     </ThemeProvider>
-    // </body>
   );
-  };
+}

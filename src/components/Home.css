@@ -94,3 +94,14 @@
     color: black
 }
 
+.memberBioPic img{
+    margin: 10px;
+    width: 800px;
+    height: 800px;
+    /* padding: 40px; */
+    float: left;
+    text-align: center;
+    font-size: 25px;
+    color: black;
+}
+
