@@ -116,7 +116,12 @@ export default function App() {
             >
               HOME
             </Button>
-            <img className="btsLogo" src={btsLogoImage} alt="btslogo" />
+            <img
+              className="btsLogo"
+              src={btsLogoImage}
+              alt="btslogo"
+              // style={"padding-top: 15px;"}
+            />
             <Button
               id="quizButton"
               href="http://localhost:3000/quiz"
