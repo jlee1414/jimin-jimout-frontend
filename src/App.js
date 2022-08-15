@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 import btsLogoImage from "./components/images/BTS-army-logo.jpg";
-import chimmy from "./components/images/chimmy.jpeg";
-import shooky from "./components/images/shooky.jpeg";
+
 
 import Navbar from "./components/Navbar";
 import { Box, Button } from "@material-ui/core";
