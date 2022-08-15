@@ -13,17 +13,17 @@ const ResultsList = (props) => {
   // };
 
   return (
-    <body className="resultListBody">
+    <div className="resultListBody">
       <div className="resultMood">
         <Typography align="center" variant="h5">
           According to the quiz, you are {props.moodResult.join(", ")}.
         </Typography>
       </div>
-      <div>{resultComponents}</div>;
+      <div className="displayAllResults">{resultComponents}</div>;
       <div>
         <button onClick={props.retakeQuiz}>Retake Quiz</button>
       </div>
-    </body>
+    </div>
   );
 };
 
