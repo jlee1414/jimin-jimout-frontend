@@ -103,7 +103,6 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <div className="App-Main">
         <header className="App-Main-header">
-          
           <h2>BTS</h2>
         </header>
         {/* <nav class="capstone-name">
@@ -127,6 +126,7 @@ export default function App() {
             className="btsLogo"
             src={btsLogoImage}
             alt="btslogo"
+            // style={"padding-top: 15px;"}
             />
             <Button id="quizButton"
               href="http://localhost:3000/quiz" 

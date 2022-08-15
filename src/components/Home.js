@@ -13,7 +13,8 @@ import JiminImage from "./images/Jimin-wow.jpeg";
 import SugaImage from "./images/suga-profile.jpeg";
 import groupPhoto from "./images/Group_3.jpeg";
 import VImage from "./images/V- GQ.jpeg";
-import {Button} from "@material-ui/core";
+import {Button, Box} from "@material-ui/core";
+
 
 
 const bios = {
@@ -45,13 +46,18 @@ const Home = (props) => {
     return (
       <body className="homeBody">
         <div>
-          <Grid container justify="center">
-          <img
-            className="btsMainPic"
-            src={groupPhoto}
-            alt="group"
-          />
-          </Grid>
+          <Box p= {3}>
+            <Grid container justify="center">
+            <img
+              className="btsMainPic"
+              src={groupPhoto}
+              alt="group"
+              height="600px"
+              width="900px"
+      
+            />
+            </Grid>
+          </Box>
         </div>
         <div className="memberBio">
           <Grid container justify="center">
@@ -72,13 +78,14 @@ const Home = (props) => {
   }
   return (
     <body className="homeBody">
-      <div>
+      <div id="mainPicParent">
         <Grid container justify="center">
         <img
           className="btsMainPic"
           src= {groupPhoto}
-          // src="https://ibighit.com/bts/images/profile/proof/member/bts-pc.jpg"
           alt="group"
+          height="600px"
+          width="900px"
         />
         </Grid>
       </div>

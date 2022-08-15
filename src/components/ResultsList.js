@@ -22,7 +22,7 @@ const ResultsList = (props) => {
       According to the quiz, you are [quizMood]. 
       </Typography>
     </div>
-    <div>{resultComponents}</div>;
+    <div>{resultComponents}</div>
   </body>
   );
 };

@@ -11,11 +11,30 @@
     margin-left: auto;
     margin-right: auto 
 }
+
+.resultsBody {
+    /* padding-top: 20px; */
+    /* margin-left: 30px;
+    margin-right: auto; */
+    /* display:inline-block; */
+    display: flex;
+    flex-wrap: wrap;
+    /* float:left; */
+    align-content: center;
+    justify-content: center;
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 20px;
+    margin: auto;
+    width: 100%;
+    /* flex-direction: row; */
+}
+
 .playlist {
     border: outset;
     border: medium solid;
     border-color: rgb(200, 200, 228);
-    padding: 10px;
     box-shadow: 6px 4px 8px;
     border-width: 3em ;
     border-radius: 15px 15px;
@@ -23,26 +42,7 @@
     height: 300px;
     color: black;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-
-.resultsBody {
-    padding-top: 20px;
-    margin: auto;
-    /* display: block; */
-    padding: 20px;
-    float:left;
-    /* position: relative; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    font-family: sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
 }
 
 .artist-image img{

@@ -1,16 +1,18 @@
 .homeBody {
-    background-color: rgb(255, 255, 255)
+    background-color: rgb(250, 250, 250)
 };
 
-.btsMainPic, img {
+
+.btsMainPic {
     /* background-image: url('./images/bts-m.jpeg'); */
     background-repeat: no-repeat;
-    width: 1000px;
-    height: 75px;
+    width: 600px;
+    height: 400px;
     place-items: center;
     display: block;
     margin: 0 auto;
-    padding: 40px
+    padding: 40px;
+    border: solid red 3px;
 } 
 
 .membersImages {
@@ -23,6 +25,7 @@
     text-align: center;
     font-size: 25px;
     color: black;
+
 }
 
 .membersImages, h1 {
