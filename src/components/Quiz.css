@@ -13,14 +13,10 @@ color: #ffffff;
 display: flex;
 justify-content: center;
 align-items: center;
-/* min-height: 1vh; */
-/* background: #a8c0ff;
-background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);
-background: linear-gradient(to right, #3f2b96, #a8c0ff);  */
 padding-top: 80px;
 overflow-y: hidden;
 font-family: Georgia, 'Times New Roman', Times, serif;
-color: #ffffff;
+color:  rgb(250, 250, 250);
 }
 
 .app {

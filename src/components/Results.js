@@ -13,9 +13,7 @@ const Result = (props) => {
   const spotifyURL = "https://open.spotify.com/track/" + props.song.id;
   const audioPreview = props.song.previewUrl;
 
-//  const Mood= (props) => {
-//   const quizMood = props. //quiz results
-//  } 
+
 
 
   return (
@@ -29,11 +27,7 @@ const Result = (props) => {
         />
         </Grid>
       </div> */}
-      {/* <div>
-        <Typography color="white" align="center" variant="h4">
-            According to the quiz, you are [mood]. 
-        </Typography>
-      </div> */}
+      
         <div className="playlist">
           <Typography className="song-display" align="center" variant="h8">
             Song: {props.song.track}

@@ -11,6 +11,7 @@ import RMImage from "./images/RM-Vegas.webp";
 import JHopeImage from "./images/Jhope-cute.jpeg";
 import JiminImage from "./images/Jimin-wow.jpeg";
 import SugaImage from "./images/suga-profile.jpeg";
+import groupPhoto from "./images/Group_3.jpeg";
 import VImage from "./images/V- GQ.jpeg";
 import {Button} from "@material-ui/core";
 
@@ -44,11 +45,13 @@ const Home = (props) => {
     return (
       <body className="homeBody">
         <div>
+          <Grid container justify="center">
           <img
             className="btsMainPic"
-            src="https://ibighit.com/bts/images/profile/proof/member/bts-pc.jpg"
+            src={groupPhoto}
             alt="group"
           />
+          </Grid>
         </div>
         <div className="memberBio">
           <Grid container justify="center">
@@ -59,7 +62,7 @@ const Home = (props) => {
             <Button
             className="backtoArtistsButton"
             variant="contained" 
-            color= "secondary" 
+            color= "primary" 
             onClick={backToHomePage}>
             BACK TO MEMBERS
             </Button>
@@ -73,7 +76,8 @@ const Home = (props) => {
         <Grid container justify="center">
         <img
           className="btsMainPic"
-          src="https://ibighit.com/bts/images/profile/proof/member/bts-pc.jpg"
+          src= {groupPhoto}
+          // src="https://ibighit.com/bts/images/profile/proof/member/bts-pc.jpg"
           alt="group"
         />
         </Grid>

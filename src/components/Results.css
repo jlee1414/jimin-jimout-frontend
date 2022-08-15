@@ -14,7 +14,7 @@
 .playlist {
     border: outset;
     border: medium solid;
-    border-color: lavender;
+    border-color: rgb(200, 200, 228);
     padding: 10px;
     box-shadow: 6px 4px 8px;
     border-width: 3em ;
@@ -24,31 +24,25 @@
     color: black;
     display: block;
     margin-left: auto;
-    margin-right: auto 
+    margin-right: auto;
+
 }
 
+
 .resultsBody {
+    padding-top: 20px;
+    margin: auto;
+    /* display: block; */
+    padding: 20px;
+    float:left;
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0;
     font-family: sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    }
-    
-    
-.resultsBody {
-
-    padding-top: 20px;
-    /* overflow-y: hidden; */
-    /* display: block; */
-    /* margin-left: auto;
-    margin-right: auto; */
-    padding: 20px;
-    float:left;
-    position: relative;
-    /* text-align: center;
-    justify-content: center;
-    align-items: center; */
-
 }
 
 .artist-image img{

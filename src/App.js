@@ -14,10 +14,10 @@ import {Grid} from "@material-ui/core";
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#7e57c2',
+      main: '#8965b3',
     },
     secondary: {
-      main: '#512da8',
+      main: '#a68cc6',
     },
   },
 });
@@ -119,7 +119,7 @@ export default function App() {
               href="http://localhost:3000/" 
               size="small"
               variant="contained"
-              color="secondary"
+              color="primary"
               > 
               HOME
             </Button>
@@ -132,7 +132,7 @@ export default function App() {
               href="http://localhost:3000/quiz" 
               size="small"
               variant="contained"
-              color="secondary"
+              color="primary"
               > 
               QUIZ
             </Button>
