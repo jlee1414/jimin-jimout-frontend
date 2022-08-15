@@ -104,13 +104,20 @@ export default function App() {
       <div className="App-Main">
         <header className="App-Main-header">
           
-          <h2>Once You Jimin, You Can't Jimout</h2>
+          <h2>BTS</h2>
         </header>
+        {/* <nav class="capstone-name">
+          <div class="container-capstone">
+            <a class="brand" href="#">
+              <strong>Once you Jimin, You can't Jimouit</strong>
+            </a>
+          </div>
+        </nav> */}
         <div className="navigation-bar-app-page">
           <Grid container justify="center">
             <Button id="homeButton"
               href="http://localhost:3000/" 
-              size="large"
+              size="small"
               variant="contained"
               color="secondary"
               > 
@@ -123,9 +130,9 @@ export default function App() {
             />
             <Button id="quizButton"
               href="http://localhost:3000/quiz" 
-              size="large"
+              size="small"
               variant="contained"
-              color="primary"
+              color="secondary"
               > 
               QUIZ
             </Button>

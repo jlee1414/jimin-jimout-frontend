@@ -9,14 +9,14 @@ color: #ffffff;
 
 
 .quizBody {
-background-color: #7cc6fe;
+/* background-color: #7cc6fe; */
 display: flex;
 justify-content: center;
 align-items: center;
 /* min-height: 1vh; */
-background: #a8c0ff;
+/* background: #a8c0ff;
 background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);
-background: linear-gradient(to right, #3f2b96, #a8c0ff); 
+background: linear-gradient(to right, #3f2b96, #a8c0ff);  */
 padding-top: 80px;
 overflow-y: hidden;
 font-family: Georgia, 'Times New Roman', Times, serif;
@@ -32,6 +32,9 @@ max-width: 1000px;
 height: 100%;
 max-height: 2000px;
 margin: 0 auto 214px;
+background: #a8c0ff;
+background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);
+background: linear-gradient(to right, #3f2b96, #a8c0ff); 
 }
 
 .score-section {

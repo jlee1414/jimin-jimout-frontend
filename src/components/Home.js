@@ -79,7 +79,7 @@ const Home = (props) => {
         </Grid>
       </div>
       <div className="membersImages">
-        <h1>THE MEMBERS</h1>
+        <h1>MEMBER</h1>
         <img 
           className="Jin" 
           src={JinImage} 

@@ -1,7 +1,8 @@
 .homeBody {
-    background: #a8c0ff;
+    /* background: #a8c0ff;
     background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);
-    background: linear-gradient(to right, #3f2b96, #a8c0ff); 
+    background: linear-gradient(to right, #3f2b96, #a8c0ff);  */
+    background-color: white
 };
 
 .btsText{
@@ -15,7 +16,7 @@
     place-items: center;
     display: block;
     margin: 0 auto;
-    padding: 50px
+    padding: 40px
 } 
 
 
@@ -24,11 +25,16 @@
     margin: 10px;
     width: 800px;
     height: 800px;
-    padding: 50px;
+    /* padding: 40px; */
     float: left;
     width: auto;
     text-align: center;
     font-size: 25px;
+    color: black;
+}
+
+.membersImages, h1 {
+    color: black
 }
 
 .Jk {
@@ -89,6 +95,7 @@
 
 .memberBio {
     padding: 25px;
-    font-size: 25px;
+    font-size: 30px;
+    color: black
 }
 

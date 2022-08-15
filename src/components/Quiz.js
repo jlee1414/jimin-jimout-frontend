@@ -29,7 +29,7 @@ const Quiz = (props) => {
     },
     {
       questionText:
-        "The sun is shining, and the temperature is just right. What are you going to do today?",
+        "The sun is shining and the temperature is just right. What are you going to do today?",
       answerOptions: [
         {
           answerText: "A: Get outside and do something great!",
