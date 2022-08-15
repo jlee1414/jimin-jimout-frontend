@@ -38,7 +38,7 @@ const Result = (props) => {
           <Typography className="song-display" align="center" variant="h4">
             Song: {props.song.track}
           </Typography>
-          <Typography className="artist-display" align="center" variant="h4">
+          <Typography className="artist-display" align="center" variant="h5">
             Artist: {props.song.artist}
           </Typography>
 

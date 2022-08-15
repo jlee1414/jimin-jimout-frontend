@@ -12,9 +12,18 @@
     margin-right: auto 
 }
 .playlist {
-    align-items: center;
-    justify-content: center;
-    /* padding: 40px */
+    border: outset;
+    border: medium solid;
+    border-color: lavender;
+    padding: 10px;
+    box-shadow: 6px 4px 8px;
+    border-width: 3em ;
+    border-radius: 15px 15px;
+    width: 500px;
+    color: black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
 }
 
 .resultsBody {
@@ -46,8 +55,8 @@
 
 
 .artist-image img{
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     display: block;
     margin-left: auto;
     margin-right: auto 
