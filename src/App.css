@@ -13,19 +13,8 @@
 
 
 body {
-    /* background: #a8c0ff;
-    background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);
-    background: linear-gradient(to right, #3f2b96, #a8c0ff);  */
-    /* display: grid;
-    grid-template-columns: 200px auto auto auto auto;
-    grid-template-rows: auto auto auto auto;
-    grid-gap: 20px;
-    justify-items: space-evenly;
-    border-bottom: 10px solid red;
-    border-top: 10px solid blue;
-    border-left: 10px solid green;
-    border-right: 10px solid yellow; */
-    background-color: white
+    background-color: rgb(250, 250, 250);
+    /* background-color: #fff; */
 }
 
 .btsLogo {

@@ -1,25 +1,17 @@
 .homeBody {
-    /* background: #a8c0ff;
-    background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);
-    background: linear-gradient(to right, #3f2b96, #a8c0ff);  */
-    background-color: white
+    background-color: rgb(255, 255, 255)
 };
 
-.btsText{
-}
-
-.btsMainPic {
+.btsMainPic, img {
     /* background-image: url('./images/bts-m.jpeg'); */
     background-repeat: no-repeat;
-    width: 1050px;
-    height: 700px;
+    width: 1000px;
+    height: 75px;
     place-items: center;
     display: block;
     margin: 0 auto;
     padding: 40px
 } 
-
-
 
 .membersImages {
     margin: 10px;

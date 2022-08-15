@@ -11,10 +11,10 @@ import { Grid } from "@material-ui/core";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#7e57c2",
+      main: "#8965b3",
     },
     secondary: {
-      main: "#512da8",
+      main: "#a68cc6",
     },
   },
 });
@@ -51,6 +51,7 @@ export default function App() {
 
   const [finalQuizResult, setFinalQuizResult] = useState([]);
   const [showResults, setShowResults] = useState(false);
+  const [finalMoodResult, setFinalMoodResult] = useState([]);
 
   const handleFinalQuizAnswerClick = (quizResults) => {
     const max = Object.keys(quizResults).reduce(
@@ -60,6 +61,7 @@ export default function App() {
     const maxResult = Object.keys(quizResults).filter(
       (v) => quizResults[v] === max
     );
+    setFinalMoodResult(maxResult);
 
     let valenceArray = [];
 
@@ -93,6 +95,10 @@ export default function App() {
     setShowResults(true);
   };
 
+  const retakeQuiz = () => {
+    setShowResults(false);
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <div className="App-Main">
@@ -106,7 +112,7 @@ export default function App() {
               href="http://localhost:3000/"
               size="small"
               variant="contained"
-              color="secondary"
+              color="primary"
             >
               HOME
             </Button>
@@ -116,7 +122,7 @@ export default function App() {
               href="http://localhost:3000/quiz"
               size="small"
               variant="contained"
-              color="secondary"
+              color="primary"
             >
               QUIZ
             </Button>
@@ -124,7 +130,9 @@ export default function App() {
           <Navbar
             handleFinalQuizAnswerClick={handleFinalQuizAnswerClick}
             quizResult={finalQuizResult}
+            moodResult={finalMoodResult}
             showResults={showResults}
+            retakeQuiz={retakeQuiz}
           />
         </div>
         <footer></footer>

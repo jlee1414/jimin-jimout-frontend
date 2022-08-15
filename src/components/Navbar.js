@@ -11,7 +11,11 @@ const Navbar = (props) => {
   if (props.showResults) {
     return (
       <div>
-        <ResultsList quizResult={props.quizResult} />
+        <ResultsList
+          quizResult={props.quizResult}
+          moodResult={props.moodResult}
+          retakeQuiz={props.retakeQuiz}
+        />
       </div>
     );
   }
@@ -35,6 +39,7 @@ const Navbar = (props) => {
 Navbar.propTypes = {
   quizResult: PropTypes.array.isRequired,
   handleFinalQuizAnswerClick: PropTypes.func.isRequired,
+  retakeQuiz: PropTypes.func.isRequired,
 };
 
 export default Navbar;
