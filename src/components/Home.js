@@ -8,7 +8,7 @@ import RMImage from "./images/RM-Vegas.webp";
 import JHopeImage from "./images/Jhope-cute.jpeg";
 import JiminImage from "./images/Jimin-wow.jpeg";
 import SugaImage from "./images/suga-profile.jpeg";
-import groupPhoto from "./images/Group_3.jpeg";
+import groupPhoto from "./images/group_4.jpg";
 import VImage from "./images/V- GQ.jpeg";
 import { Button, Box } from "@material-ui/core";
 
@@ -65,13 +65,7 @@ const Home = (props) => {
         <div>
           <Box p={20}>
             <Grid container justify="center">
-              <img
-                className="btsMainPic"
-                src={groupPhoto}
-                alt="group"
-                height="600px"
-                width="900px"
-              />
+              <img className="btsMainPic" src={groupPhoto} alt="group" />
             </Grid>
           </Box>
         </div>
@@ -101,13 +95,7 @@ const Home = (props) => {
       <div id="mainPicParent">
         <Box p={20}>
           <Grid container justify="center">
-            <img
-              className="btsMainPic"
-              src={groupPhoto}
-              alt="group"
-              height="600px"
-              width="900px"
-            />
+            <img className="btsMainPic" src={groupPhoto} alt="group" />
           </Grid>
         </Box>
       </div>

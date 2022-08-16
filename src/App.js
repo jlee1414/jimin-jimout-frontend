@@ -4,7 +4,7 @@ import "./App.css";
 import btsLogoImage from "./components/images/BTS-army-logo.jpg";
 
 import Navbar from "./components/Navbar";
-import { Box, Button } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import { ThemeProvider, createTheme } from "@material-ui/core/styles";
 import { Grid } from "@material-ui/core";
 
@@ -67,7 +67,6 @@ export default function App() {
 
     for (var i = 0; i < spotifyData.length; ++i) {
       let valenceData = parseFloat(spotifyData[i].valence);
-      console.log(typeof valenceData);
 
       if (maxResult.includes("angry")) {
         if (0 <= valenceData && valenceData <= 0.25) {
@@ -116,12 +115,7 @@ export default function App() {
             >
               HOME
             </Button>
-            <img
-              className="btsLogo"
-              src={btsLogoImage}
-              alt="btslogo"
-              // style={"padding-top: 15px;"}
-            />
+            <img className="btsLogo" src={btsLogoImage} alt="btslogo" />
             <Button
               id="quizButton"
               href="https://jimin-jimout.herokuapp.com/quiz"

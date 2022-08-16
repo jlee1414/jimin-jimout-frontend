@@ -2,8 +2,6 @@ import PropTypes from "prop-types";
 import "./Results.css";
 import ReactAudioPlayer from "react-audio-player";
 import { Typography } from "@material-ui/core";
-import { Grid } from "@material-ui/core";
-import btsGroupPic from "./images/Group_2.jpeg";
 
 const Result = (props) => {
   const imgURL = props.song.imageUrl;
@@ -12,16 +10,6 @@ const Result = (props) => {
 
   return (
     <div className="resultsBody">
-      {/* <div>
-        <Grid container justify="center">
-        <img
-          className="btsMainPic"
-          src={btsGroupPic}
-          alt="group"
-        />
-        </Grid>
-      </div> */}
-
       <div className="playlist">
         <Typography className="song-display" align="center" variant="h8">
           Song: {props.song.track}

@@ -8,10 +8,6 @@ const ResultsList = (props) => {
     <Results song={song} />
   ));
 
-  // const Mood= (props) => {
-  //     const quizMood = props.quizResult
-  // };
-
   return (
     <div className="resultListBody">
       <div className="resultMood">

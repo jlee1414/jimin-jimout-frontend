@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Quiz from "./Quiz";
 import ResultsList from "./ResultsList";
-// import { AppBar, Toolbar, Typography } from "@material-ui/core";
 import PropTypes from "prop-types";
 
 const Navbar = (props) => {
