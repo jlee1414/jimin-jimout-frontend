@@ -16,7 +16,7 @@ const ResultsList = (props) => {
     <div className="resultListBody">
       <div className="resultMood">
         <Typography align="center" variant="h5">
-          According to the quiz, you are {props.moodResult.join(", ")}.
+          According to the quiz, you are {props.moodResult.join(" and ")}.
         </Typography>
       </div>
       <div className="displayAllResults">{resultComponents}</div>;
