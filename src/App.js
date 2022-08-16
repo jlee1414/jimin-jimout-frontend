@@ -109,7 +109,7 @@ export default function App() {
           <Grid container justify="center">
             <Button
               id="homeButton"
-              href="http://localhost:3000/"
+              href="https://jimin-jimout.herokuapp.com/"
               size="small"
               variant="contained"
               color="primary"
@@ -124,7 +124,7 @@ export default function App() {
             />
             <Button
               id="quizButton"
-              href="http://localhost:3000/quiz"
+              href="https://jimin-jimout.herokuapp.com/quiz"
               size="small"
               variant="contained"
               color="primary"
