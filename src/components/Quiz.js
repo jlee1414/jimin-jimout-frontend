@@ -57,9 +57,9 @@ const Quiz = (props) => {
       questionText: "Choose a color:",
       answerOptions: [
         { answerText: "A: Beige", isCorrect: false, mood: "tired" },
-        { answerText: "B: Red", isCorrect: false, mood: "angry" },
-        { answerText: "C: Black", isCorrect: false, mood: "sad" },
-        { answerText: "D: Blue", isCorrect: false, mood: "happy" },
+        { answerText: "B: Black", isCorrect: false, mood: "angry" },
+        { answerText: "C: Blue", isCorrect: false, mood: "sad" },
+        { answerText: "D: Purple", isCorrect: false, mood: "happy" },
       ],
     },
     {
