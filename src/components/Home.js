@@ -63,7 +63,7 @@ const Home = (props) => {
     return (
       <body className="homeBody">
         <div>
-          <Box p= {20}>
+          <Box p={20}>
             <Grid container justify="center">
               <img
                 className="btsMainPic"
@@ -99,7 +99,7 @@ const Home = (props) => {
   return (
     <body className="homeBody">
       <div id="mainPicParent">
-      <Box p= {20}>
+        <Box p={20}>
           <Grid container justify="center">
             <img
               className="btsMainPic"
@@ -109,16 +109,7 @@ const Home = (props) => {
               width="900px"
             />
           </Grid>
-          </Box>
-        <Grid container justify="center">
-          <img
-            className="btsMainPic"
-            src={groupPhoto}
-            alt="group"
-            height="600px"
-            width="900px"
-          />
-        </Grid>
+        </Box>
       </div>
       <div className="membersImages">
         <h1>MEMBER</h1>
