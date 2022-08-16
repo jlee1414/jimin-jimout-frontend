@@ -63,16 +63,16 @@ const Home = (props) => {
     return (
       <body className="homeBody">
         <div>
-          <Box p= {20}>
-          <Grid container justify="center">
-            <img
-              className="btsMainPic"
-              src={groupPhoto}
-              alt="group"
-              height="600px"
-              width="900px"
-            />
-          </Grid>
+          <Box p={20}>
+            <Grid container justify="center">
+              <img
+                className="btsMainPic"
+                src={groupPhoto}
+                alt="group"
+                height="600px"
+                width="900px"
+              />
+            </Grid>
           </Box>
         </div>
         <div className="memberBioPic">
@@ -99,27 +99,36 @@ const Home = (props) => {
   return (
     <body className="homeBody">
       <div id="mainPicParent">
-      <Box p= {20}>
-        <Grid container justify="center">
-          <img
-            className="btsMainPic"
-            src={groupPhoto}
-            alt="group"
-            height="600px"
-            width="900px"
-          />
-        </Grid>
-      </Box>
+        <Box p={20}>
+          <Grid container justify="center">
+            <img
+              className="btsMainPic"
+              src={groupPhoto}
+              alt="group"
+              height="600px"
+              width="900px"
+            />
+          </Grid>
+        </Box>
       </div>
       <div className="membersImages">
         <h1>MEMBER</h1>
         <img className="Jin" src={JinImage} alt="Jin" onClick={switchBio} />
         <img className="RM" src={RMImage} alt="RM" onClick={switchBio} />
         <img className="V" src={VImage} alt="V" onClick={switchBio} />
-        <img className="Jimin" src={JiminImage} alt="Jimin" onClick={switchBio}/>
+        <img
+          className="Jimin"
+          src={JiminImage}
+          alt="Jimin"
+          onClick={switchBio}
+        />
         <img className="Jk" src={JkImage} alt="JK" onClick={switchBio} />
         <img className="Suga" src={SugaImage} alt="Suga" onClick={switchBio} />
-        <img className="Jhope" src={JHopeImage} alt="JHope" onClick={switchBio}
+        <img
+          className="Jhope"
+          src={JHopeImage}
+          alt="JHope"
+          onClick={switchBio}
         />
       </div>
     </body>
