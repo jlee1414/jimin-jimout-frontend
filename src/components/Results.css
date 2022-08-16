@@ -18,16 +18,16 @@
     margin-right: auto; */
     /* display:inline-block; */
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     /* float:left; */
-    align-content: center;
-    justify-content: center;
+    /* align-content: center; */
+    justify-content: center; 
     font-family: sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     padding: 20px;
-    margin: auto;
-    width: 100%;
+    /* margin: auto;
+    width: 100%; */
     /* flex-direction: row; */
 }
 

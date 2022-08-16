@@ -11,7 +11,7 @@ const Result = (props) => {
   const audioPreview = props.song.previewUrl;
 
   return (
-    <body className="resultsBody">
+    <div className="resultsBody">
       {/* <div>
         <Grid container justify="center">
         <img
@@ -44,7 +44,7 @@ const Result = (props) => {
           controls
         />
       </div>
-    </body>
+    </div>
   );
 };
 
