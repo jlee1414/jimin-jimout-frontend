@@ -19,7 +19,7 @@ const ResultsList = (props) => {
           According to the quiz, you are {props.moodResult.join(" and ")}.
         </Typography>
       </div>
-      <div className="displayAllResults">{resultComponents}</div>;
+      <div className="displayAllResults">{resultComponents}</div>
       <div>
         <button onClick={props.retakeQuiz}>Retake Quiz</button>
       </div>
